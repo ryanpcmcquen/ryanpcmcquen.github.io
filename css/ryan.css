@@ -3,7 +3,12 @@ i.top-icons {
   font-size: 20rem;
   padding: 1rem;
 }
-.slides li {
+ul.hero-spot,
+ul.hero-spot li {
+  list-style-type: none;
+}
+
+.hero-spot li {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
