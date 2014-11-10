@@ -1,0 +1,10 @@
+.top-icons,
+i.top-icons {
+  font-size: 20rem;
+  padding: 1rem;
+}
+.slides li {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
