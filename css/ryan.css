@@ -6,6 +6,7 @@ i.top-icons {
 ul.hero-spot,
 ul.hero-spot li {
   list-style-type: none;
+  display: inline;
 }
 
 .hero-spot li {
