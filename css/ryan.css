@@ -13,3 +13,9 @@ ul.hero-spot li {
   margin-right: auto;
   text-align: center;
 }
+
+.flex-direction-nav {
+  display: none;
+}
+
+
