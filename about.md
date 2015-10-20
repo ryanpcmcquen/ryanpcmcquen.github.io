@@ -13,6 +13,8 @@ I write code.
 
 <span id="moniker">slackwareNerd-veggie-jScriptDork</span>
 
+* * *
+
 Want to easily do stuff on scroll events?
 
 [scrollEvents](https://github.com/ryanpcmcquen/scrollEvents)
