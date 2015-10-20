@@ -7,7 +7,6 @@ a {
   color: #ffffff;
   box-shadow: 1px 1px 2px #333333;
   border-width: 0;
-  width: 75%;
   margin-left: auto;
   margin-right: auto;
   font-family: monospace;
@@ -25,7 +24,6 @@ a {
 /* begin the media queries */
 @media (max-width: 48rem) {
   #moniker {
-    width: 90%;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
