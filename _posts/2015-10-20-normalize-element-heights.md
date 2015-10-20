@@ -9,7 +9,7 @@ Use the following code to work around elements of differing heights, that are li
 
 To use it, just put the selector inside `querySelectorAll()` on the `elementArray` (replacing `.foobar`).
 
-If you haven't used `querySelectorAll()`, you owe it to yourself to read the (MDN article)[https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll].
+If you haven't used `querySelectorAll()`, you owe it to yourself to read the [MDN article](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll).
 
     window.addEventListener('load',
         function () {
