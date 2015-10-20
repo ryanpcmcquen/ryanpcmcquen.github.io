@@ -1,16 +1,7 @@
 a {
   word-wrap: break-word;
 }
-#moniker {
-  padding: 1rem;
-  background-color: #007ecc;
-  color: #ffffff;
-  box-shadow: 1px 1px 2px #333333;
-  border-width: 0;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: monospace;
-}
+
 #moniker:hover {
   cursor: pointer;
 }
@@ -21,12 +12,3 @@ a {
 ::selection {
   background-color: transparent;
 }
-/* begin the media queries */
-@media (max-width: 48rem) {
-  #moniker {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-}
-/* end the media queries */
-
