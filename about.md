@@ -2,7 +2,9 @@
 layout: page
 title: About
 permalink: /about/
-custom_css: bigLinks
+custom_css:
+- bigLinks
+- moniker
 custom_js: scrambler
 ---
 ### Hi, I'm Ryan.
