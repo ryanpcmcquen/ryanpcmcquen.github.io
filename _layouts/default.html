@@ -17,6 +17,12 @@
 
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
+    {% if page.custom_css %}
+      {% for css_file in page.custom_css %}
+        <link href='/css/{{ css_file }}.css' rel='stylesheet'>
+      {% endfor %}
+    {% endif %}
+
     {% if page.custom_js %}
       {% for js_file in page.custom_js %}
         <script src='/js/{{ js_file }}.js'></script>
