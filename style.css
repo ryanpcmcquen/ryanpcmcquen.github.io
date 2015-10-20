@@ -1,20 +1,5 @@
-div {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 1rem;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 2rem;
-  width: 80%;
-  box-shadow: 0 0 2px #333333;
-  box-sizing: border-box;
-}
 a {
   word-wrap: break-word;
-}
-body {
-  background-color: #eeeeee;
 }
 #moniker {
   padding: 1rem;
@@ -37,32 +22,12 @@ body {
 ::selection {
   background-color: transparent;
 }
-img {
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px #555555;
-  width: 75%;
-  max-width: 300px;
-}
-.ryan--tux:hover {
-  -webkit-filter: brightness(1.4);
-  filter: brightness(1.4);
-}
 /* begin the media queries */
-@media (max-width: 70rem) {
-  div {
-    font-size: 1.25rem;
-  }
-}
 @media (max-width: 48rem) {
   #moniker {
     width: 90%;
     word-wrap: break-word;
     overflow-wrap: break-word;
-  }
-}
-@media (max-width: 20rem) {
-  div, a, p, h3 {
-    font-size: 65%;
   }
 }
 /* end the media queries */
