@@ -1,74 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script>
-      var host = "ryanpcmcquen.org";
-      if ((host === window.location.host) && (window.location.protocol !== "https:")) window.location.protocol = "https";
-    </script>
-    <meta charset='utf-8'>
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+---
+layout: default
+---
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+<div class="home">
 
-    <title>Ryan P.C. McQuen</title>
-  </head>
+  <h1 class="page-heading">Posts</h1>
 
-  <body>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-    <header>
-      <div class="container">
-        <h1>Ryan P.C. McQuen</h1>
-        <h2>h4ck3r</h2>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-        <section id="downloads">
-          <a target="_blank" href="https://github.com/ryanpcmcquen" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-    <div class="container">
-      <section id="main_content">
-        <div>
-          <h3>
-          <a id="hi-im-ryan-pc-mcquen" class="anchor" href="#hi-im-ryan-pc-mcquen" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hi, I'm Ryan.</h3>
-            <p>I write code.</p>
-            <span id="moniker">slackwareNerd-veggie-jScriptDork</span>
-            <p>Want to easily do stuff on scroll events?</p>
-            <p><a href="https://github.com/ryanpcmcquen/scrollEvents">scrollEvents</a></p>
-            <p>Need to copy text without flash?</p>
-            <p><a href="https://github.com/ryanpcmcquen/simpleJsCopy">simpleJsCopy</a></p>
-            <p>Need nerdy placeholders?</p>
-            <a href="//yogifil.la">//yogifil.la</a> | <a href="//makelin.us">//makelin.us</a>
-            <p>How about image optimization?</p>
-            <p><a href="https://github.com/ryanpcmcquen/image-ultimator">imgult</a></p>
-            <hr>
-            <h5>
-          <a id="other-stuff" class="anchor" href="#other-stuff" aria-hidden="true"><span class="octicon octicon-link"></span></a>OTHER STUFF:</h5>
-            <p>Allegedly useful:</p>
-            <p><a href="https://github.com/ryanpcmcquen/config-o-matic">config-o-matic</a> &amp; <a href="https://github.com/ryanpcmcquen/linuxTweaks">linuxTweaks</a></p>
-            <p>Not useful:</p>
-            <p><a href="https://jsfiddle.net/user/ryanpcmcquen/">fiddles</a></p>
-            <p>Probably detrimental:</p>
-            <p><a href="https://github.com/ryanpcmcquen">github</a> &amp; <a href="https://ryanpcmcquen.neocities.org/">neocities</a></p>
-        </div>
-      </section>
-    </div>
-
-  <script async>
-    var cb = function () {
-        var l = document.createElement('link');
-        l.rel = 'stylesheet';
-        l.href = 'style.css';
-        var h = document.getElementsByTagName('head')[0];
-        h.parentNode.insertBefore(l, h);
-    };
-    var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
-    if (raf) raf(cb);
-    else window.addEventListener('load', cb);
-  </script>
-  <script src="ryan.js"></script>
-  </body>
-</html>
+</div>
