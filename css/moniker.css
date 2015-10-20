@@ -3,3 +3,6 @@
   bottom: 5px;
   right: 5px;
 }
+#moniker:hover {
+  cursor: pointer;
+}
