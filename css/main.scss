@@ -50,3 +50,12 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+
+/* my crap */
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+::selection {
+  background-color: rgba(0, 0, 0, 0.1);
+}
