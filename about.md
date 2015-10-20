@@ -14,7 +14,7 @@ I write code.
 <span id="moniker">slackwareNerd-veggie-jScriptDork</span>
 
 * * *
-
+<br>
 
 Want to easily do stuff on scroll events?
 
