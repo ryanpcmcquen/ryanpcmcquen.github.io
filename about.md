@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+custom_js: ryan
 ---
 ### Hi, I'm Ryan.
 
