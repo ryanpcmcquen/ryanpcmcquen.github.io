@@ -11,18 +11,16 @@ To use it, just put the selector inside `querySelectorAll()` on the `elementArra
 
 If you haven't used `querySelectorAll()`, you owe it to yourself to read the (MDN article)[https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll].
 
-```javascript
-window.addEventListener('load',
-    function () {
-        var elementHeightArray = [];
-        var elementArray = [].slice.call(document.querySelectorAll('.foobar'));
-        elementArray.forEach(function (i) {
-            elementHeightArray.push(i.clientHeight);
-        });
-        var maxElementHeight = Math.max.apply(Math, elementHeightArray);
-        iconCardArray.forEach(function (i) {
-            i.style.height = maxElementHeight + "px";
-        });
-    }
-);
-```
+    window.addEventListener('load',
+        function () {
+            var elementHeightArray = [];
+            var elementArray = [].slice.call(document.querySelectorAll('.foobar'));
+            elementArray.forEach(function (i) {
+                elementHeightArray.push(i.clientHeight);
+            });
+            var maxElementHeight = Math.max.apply(Math, elementHeightArray);
+            iconCardArray.forEach(function (i) {
+                i.style.height = maxElementHeight + "px";
+            });
+        }
+    );
