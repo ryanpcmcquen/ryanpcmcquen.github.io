@@ -44,3 +44,5 @@ ALTERNATE SOLUTION (thanks to [Tarabyte](https://github.com/Tarabyte), added 201
         };
       }, function() {})(max + 'px');
     });
+
+[Speed comparison of the solutions.](https://jsperf.com/compare-height-normalizing-solutions)
