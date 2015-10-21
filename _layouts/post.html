@@ -14,6 +14,8 @@ layout: default
 
 </div>
 
-{% if !page.comments %}
+<!-- allow comments to be turned off with 'comments: false', -->
+<!-- but make the default true without needing to specify -->
+{% if page.comments != false %}
   {% include disqus.html %}
 {% endif %}
