@@ -28,7 +28,7 @@ Need to copy text without flash?
 
 Need nerdy placeholders?
 
-[//yogifil.la](//yogifil.la) &#124; [//makelin.us](//makelin.us)
+[//yogifil.la](//yogifil.la) & [//makelin.us](//makelin.us)
 
 How about image optimization?
 
@@ -36,7 +36,7 @@ How about image optimization?
 
 * * *
 
-##### [<span class="octicon octicon-link"></span>](#other-stuff)OTHER STUFF:
+##### OTHER STUFF:
 
 Allegedly useful:
 
@@ -48,4 +48,4 @@ Not useful:
 
 Probably detrimental:
 
-[github](https://github.com/ryanpcmcquen) & [neocities](https://ryanpcmcquen.neocities.org/)
+[neocities](https://ryanpcmcquen.neocities.org/)
