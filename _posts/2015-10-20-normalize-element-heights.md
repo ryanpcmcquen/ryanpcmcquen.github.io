@@ -16,8 +16,8 @@ If you haven't used `querySelectorAll()`, you owe it to yourself to read the [MD
         // declare the height array here since we need it
         // inside multiple functions
         var elementHeightArray = [],
-            // convert the collection into an array so we can forEach() over it
-            elementArray = [].slice.call(document.querySelectorAll('.foobar'));
+          // convert the collection into an array so we can forEach() over it
+          elementArray = [].slice.call(document.querySelectorAll('.foobar'));
         elementArray.forEach(function (i) {
           elementHeightArray.push(i.clientHeight);
         });
