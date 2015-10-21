@@ -56,9 +56,11 @@ $on-laptop:        800px;
 
 
 /* my crap */
-::-moz-selection {
+::-moz-selection, ::selection {
   background-color: rgba(0, 0, 0, 0.1);
 }
-::selection {
-  background-color: rgba(0, 0, 0, 0.1);
+
+pre ::-moz-selection, pre ::selection,
+code ::-moz-selection, code ::selection {
+  background-color: rgba(255, 255, 255, 0.2);
 }
