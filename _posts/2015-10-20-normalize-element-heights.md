@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Normalize heights of elements with JavaScript"
-date:   2015-10-20 13:41:01
+date:   2015-10-20 15:41:01
 categories: javascript
 ---
 
