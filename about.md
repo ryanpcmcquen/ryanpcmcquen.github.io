@@ -36,7 +36,7 @@ How about image optimization?
 
 * * *
 
-##### OTHER STUFF:
+#### OTHER STUFF:
 
 Allegedly useful:
 
