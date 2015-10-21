@@ -56,6 +56,10 @@ $on-laptop:        800px;
 
 
 /* my crap */
-::-moz-selection, ::selection {
+::-moz-selection {
+  background-color: hsla(154, 100%, 36%, 0.1);
+}
+/* ▲▼ these have to be in separate blocks or they don't work */
+::selection {
   background-color: hsla(154, 100%, 36%, 0.1);
 }
