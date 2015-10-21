@@ -35,12 +35,12 @@ ALTERNATE SOLUTION (thanks to [Tarabyte](https://github.com/Tarabyte), added 201
     window.addEventListener('load', function() {
       var max = 0,
         elements = document.querySelectorAll('.foobar');
-    
+
       [].reduce.call(elements, function(prev, item) {
-          max = Math.max(item.clientHeight, max);
-    
-          return function(height) {
-            prev(item.style.height = height);
-          };
-        }, function() {})(max + 'px');
+        max = Math.max(item.clientHeight, max);
+
+        return function(height) {
+          prev(item.style.height = height);
+        };
+      }, function() {})(max + 'px');
     });
