@@ -29,3 +29,18 @@ If you haven't used `querySelectorAll()`, you owe it to yourself to read the [MD
         });
       }
     );
+
+ALTERNATE SOLUTION (thanks to [Tarabyte](https://github.com/Tarabyte), added 2015.10.21)
+
+    window.addEventListener('load', function() {
+      var max = 0,
+        elements = document.querySelectorAll('.foo');
+    
+      [].reduce.call(elements, function(prev, item) {
+          max = Math.max(item.clientHeight, max);
+    
+          return function(height) {
+            prev(item.style.height = height);
+          };
+        }, function() {})(max + 'px');
+    });
