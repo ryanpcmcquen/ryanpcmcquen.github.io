@@ -19,7 +19,7 @@ If you haven't used `querySelectorAll()`, you owe it to yourself to read the [MD
                 elementHeightArray.push(i.clientHeight);
             });
             var maxElementHeight = Math.max.apply(Math, elementHeightArray);
-            iconCardArray.forEach(function (i) {
+            elementArray.forEach(function (i) {
                 i.style.height = maxElementHeight + "px";
             });
         }
