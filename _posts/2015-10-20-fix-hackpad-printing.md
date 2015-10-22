@@ -41,3 +41,27 @@ After:
 
 
 Although, this could all be for naught as I have filed an [issue](https://github.com/dropbox/hackpad/issues/33) on the Hackpad GitHub repo. I am looking into what needs to be changed to fix this, it was not obvious from my first examination of the Hackpad code.
+
+
+UPDATE 2015.10.22:
+
+The above code is a perfect example of violating the classic programmer paradigm of [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Here is a much cleaner version:
+
+    function cleanUpHackpadMarkup(selector, elementType) {
+      [].slice.call(document.querySelectorAll(selector)).forEach(function(oldMarkup) {
+        var newMarkup = document.createElement(elementType);
+        newMarkup.innerHTML = oldMarkup.innerHTML;
+        oldMarkup.parentNode.insertBefore(newMarkup, oldMarkup);
+        oldMarkup.parentNode.removeChild(oldMarkup);
+      });
+    }
+    cleanUpHackpadMarkup('ul.code li', 'div');
+    cleanUpHackpadMarkup('ul.code', 'code');
+
+And the new bookmarklet:
+
+    javascript:void%20function(){function%20e(e,n){[].slice.call(document.querySelectorAll(e)).forEach(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})}e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)}();
+
+You can drag this right to your bookmarks bar:
+
+<a id="OutputHref" ng-attr-href="{{ output }}" href="javascript:void%20function(){function%20e(e,n){[].slice.call(document.querySelectorAll(e)).forEach(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})}e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)}();">cleanUpHackpad</a>
