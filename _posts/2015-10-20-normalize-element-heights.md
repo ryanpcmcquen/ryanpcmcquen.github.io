@@ -30,7 +30,7 @@ If you haven't used `querySelectorAll()`, you owe it to yourself to read the [MD
       }
     );
 
-ALTERNATE SOLUTION (thanks to [Tarabyte](https://github.com/Tarabyte), added 2015.10.21)
+### ALTERNATE SOLUTION (thanks to [Tarabyte](https://github.com/Tarabyte), added 2015.10.21)
 
     window.addEventListener('load', function() {
       var max = 0,
