@@ -9,6 +9,8 @@ I think the only issue I have with hackpad is that the printing view is broken w
 
 For some reason code is displayed as a `ul`, with each line of code being a new `li` inside of that ... It would look great if they had merely used `<code>` tags. Not a big deal though, I wrote some quick and easy JavaScript to clean up the markup for now:
 
+*UPDATE*, I improved this code [below](#UPDATE).
+
     [].slice.call(document.querySelectorAll('ul.code li')).forEach(function (oldMarkup) {
       var newMarkup = document.createElement('div');
       newMarkup.innerHTML = oldMarkup.innerHTML;
@@ -42,7 +44,7 @@ After:
 
 Although, this could all be for naught as I have filed an [issue](https://github.com/dropbox/hackpad/issues/33) on the Hackpad GitHub repo. I am looking into what needs to be changed to fix this, it was not obvious from my first examination of the Hackpad code.
 
-
+<a name="UPDATE"></a>
 ### UPDATE 2015.10.22:
 
 The above code is a perfect example of violating the classic programmer paradigm of [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Here is a much cleaner version:
