@@ -43,7 +43,7 @@ After:
 Although, this could all be for naught as I have filed an [issue](https://github.com/dropbox/hackpad/issues/33) on the Hackpad GitHub repo. I am looking into what needs to be changed to fix this, it was not obvious from my first examination of the Hackpad code.
 
 
-UPDATE 2015.10.22:
+### UPDATE 2015.10.22:
 
 The above code is a perfect example of violating the classic programmer paradigm of [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Here is a much cleaner version:
 
