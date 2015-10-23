@@ -11,7 +11,7 @@ For some reason code is displayed as a `ul`, with each line of code being a new 
 
 *UPDATE*, I improved this code [below](#UPDATE).
 
-{% highlight javascript linenos=table %}
+{% highlight javascript %}
 [].slice.call(document.querySelectorAll('ul.code li')).forEach(function (oldMarkup) {
   var newMarkup = document.createElement('div');
   newMarkup.innerHTML = oldMarkup.innerHTML;
@@ -31,7 +31,7 @@ To turn it into a handy bookmarklet I used Chris Zarate's excellent, open-source
 
 Here is the bookmarklet below:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript %}
 javascript:void%20function(){[].slice.call(document.querySelectorAll(%22ul.code%20li%22)).forEach(function(e){var%20n=document.createElement(%22div%22);n.innerHTML=e.innerHTML,e.parentNode.insertBefore(n,e),e.parentNode.removeChild(e)}),[].slice.call(document.querySelectorAll(%22ul.code%22)).forEach(function(e){var%20n=document.createElement(%22code%22);n.innerHTML=e.innerHTML,e.parentNode.insertBefore(n,e),e.parentNode.removeChild(e)})}();
 {% endhighlight %}
 
@@ -54,7 +54,7 @@ Although, this could all be for naught as I have filed an [issue](https://github
 
 The above code is a perfect example of violating the classic programmer paradigm of [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Here is a much cleaner version:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript %}
 function cleanUpHackpadMarkup(selector, elementType) {
   [].slice.call(document.querySelectorAll(selector)).forEach(function(oldMarkup) {
     var newMarkup = document.createElement(elementType);
@@ -69,7 +69,7 @@ cleanUpHackpadMarkup('ul.code', 'code');
 
 And the new bookmarklet:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript %}
 javascript:void%20function(){function%20e(e,n){[].slice.call(document.querySelectorAll(e)).forEach(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})}e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)}();
 {% endhighlight %}
 
