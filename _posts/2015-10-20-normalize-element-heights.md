@@ -34,7 +34,7 @@ window.addEventListener('load',
 
 ### ALTERNATE SOLUTION (thanks to [Tarabyte](https://github.com/Tarabyte), added 2015.10.21)
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 window.addEventListener('load', function() {
   var max = 0,
     elements = document.querySelectorAll('.foobar');
