@@ -7,7 +7,7 @@ categories: javascript
 
 As part of building my [scrollEvents](https://github.com/ryanpcmcquen/scrollEvents) library, we needed a way to limit the amount of times `scroll` events fired, so my first solution was to use a very simple throttle function a la [jonathansampson](https://github.com/jonathansampson):
 
-{% highlight javascript linenos=table %}
+{% highlight javascript %}
 // thanks to @jonathansampson
 function throttle(callback, limit) {
   // don't wait initially
@@ -38,7 +38,7 @@ Our old `throttle` function (by @jonathansampson) wouldn't call the function on 
 
 Enter [underscore.js](http://underscorejs.org/)'s `throttle`:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript %}
 // taken from underscore 1.8.3
 _.throttle = function(func, wait, options) {
   var context, args, result;
@@ -75,7 +75,7 @@ _.throttle = function(func, wait, options) {
 
 For anyone keeping score, I also looked at the throttle function for [lodash](https://lodash.com/), but that returns a `debounce` function, so making it modular would have required quite a bit more surgery:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript %}
 // taken from lodash 3.10.1
 function throttle(func, wait, options) {
   var leading = true,
@@ -99,7 +99,7 @@ function throttle(func, wait, options) {
 
 Since our own function was only used internally, we could simplify a few things, and we didn't really need the `options` argument, so we ended up with this for our `1.0.0` release of [scrollEvents](https://github.com/ryanpcmcquen/scrollEvents):
 
-{% highlight javascript linenos=table %}
+{% highlight javascript %}
 // slightly modified/simplified version of underscore.js's throttle (v1.8.3)
 function throttle(func, wait) {
   var timeout = null,
@@ -129,7 +129,7 @@ function throttle(func, wait) {
 
 The only other *underscore* function we had to implement to make this work was `_.now()` which is either `Date.now()` or `new Date().getTime()`. Since we aren't trying to support ancient browsers (read as pre-IE9), we went with the simpler `Date.now()`. Here is *underscore*'s `_.now()`:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript %}
 _.now = Date.now || function() {
   return new Date().getTime();
 };
