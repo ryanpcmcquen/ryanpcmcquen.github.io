@@ -11,25 +11,29 @@ For some reason code is displayed as a `ul`, with each line of code being a new 
 
 *UPDATE*, I improved this code [below](#UPDATE).
 
-    [].slice.call(document.querySelectorAll('ul.code li')).forEach(function (oldMarkup) {
-      var newMarkup = document.createElement('div');
-      newMarkup.innerHTML = oldMarkup.innerHTML;
-      oldMarkup.parentNode.insertBefore(newMarkup, oldMarkup);
-      oldMarkup.parentNode.removeChild(oldMarkup);
-    });
-    
-    [].slice.call(document.querySelectorAll('ul.code')).forEach(function (oldMarkup) {
-      var newMarkup = document.createElement('code');
-      newMarkup.innerHTML = oldMarkup.innerHTML;
-      oldMarkup.parentNode.insertBefore(newMarkup, oldMarkup);
-      oldMarkup.parentNode.removeChild(oldMarkup);
-    });
+{% highlight javascript linenos=table %}
+[].slice.call(document.querySelectorAll('ul.code li')).forEach(function (oldMarkup) {
+  var newMarkup = document.createElement('div');
+  newMarkup.innerHTML = oldMarkup.innerHTML;
+  oldMarkup.parentNode.insertBefore(newMarkup, oldMarkup);
+  oldMarkup.parentNode.removeChild(oldMarkup);
+});
+
+[].slice.call(document.querySelectorAll('ul.code')).forEach(function (oldMarkup) {
+  var newMarkup = document.createElement('code');
+  newMarkup.innerHTML = oldMarkup.innerHTML;
+  oldMarkup.parentNode.insertBefore(newMarkup, oldMarkup);
+  oldMarkup.parentNode.removeChild(oldMarkup);
+});
+{% endhighlight %}
 
 To turn it into a handy bookmarklet I used Chris Zarate's excellent, open-source [Bookmarkleter](https://chriszarate.github.io/bookmarkleter/).
 
 Here is the bookmarklet below:
 
-    javascript:void%20function(){[].slice.call(document.querySelectorAll(%22ul.code%20li%22)).forEach(function(e){var%20n=document.createElement(%22div%22);n.innerHTML=e.innerHTML,e.parentNode.insertBefore(n,e),e.parentNode.removeChild(e)}),[].slice.call(document.querySelectorAll(%22ul.code%22)).forEach(function(e){var%20n=document.createElement(%22code%22);n.innerHTML=e.innerHTML,e.parentNode.insertBefore(n,e),e.parentNode.removeChild(e)})}();
+{% highlight javascript linenos=table %}
+javascript:void%20function(){[].slice.call(document.querySelectorAll(%22ul.code%20li%22)).forEach(function(e){var%20n=document.createElement(%22div%22);n.innerHTML=e.innerHTML,e.parentNode.insertBefore(n,e),e.parentNode.removeChild(e)}),[].slice.call(document.querySelectorAll(%22ul.code%22)).forEach(function(e){var%20n=document.createElement(%22code%22);n.innerHTML=e.innerHTML,e.parentNode.insertBefore(n,e),e.parentNode.removeChild(e)})}();
+{% endhighlight %}
 
 I call it `cleanUpHackpad`.
 
@@ -50,20 +54,24 @@ Although, this could all be for naught as I have filed an [issue](https://github
 
 The above code is a perfect example of violating the classic programmer paradigm of [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Here is a much cleaner version:
 
-    function cleanUpHackpadMarkup(selector, elementType) {
-      [].slice.call(document.querySelectorAll(selector)).forEach(function(oldMarkup) {
-        var newMarkup = document.createElement(elementType);
-        newMarkup.innerHTML = oldMarkup.innerHTML;
-        oldMarkup.parentNode.insertBefore(newMarkup, oldMarkup);
-        oldMarkup.parentNode.removeChild(oldMarkup);
-      });
-    }
-    cleanUpHackpadMarkup('ul.code li', 'div');
-    cleanUpHackpadMarkup('ul.code', 'code');
+{% highlight javascript linenos=table %}
+function cleanUpHackpadMarkup(selector, elementType) {
+  [].slice.call(document.querySelectorAll(selector)).forEach(function(oldMarkup) {
+    var newMarkup = document.createElement(elementType);
+    newMarkup.innerHTML = oldMarkup.innerHTML;
+    oldMarkup.parentNode.insertBefore(newMarkup, oldMarkup);
+    oldMarkup.parentNode.removeChild(oldMarkup);
+  });
+}
+cleanUpHackpadMarkup('ul.code li', 'div');
+cleanUpHackpadMarkup('ul.code', 'code');
+{% endhighlight %}
 
 And the new bookmarklet:
 
-    javascript:void%20function(){function%20e(e,n){[].slice.call(document.querySelectorAll(e)).forEach(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})}e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)}();
+{% highlight javascript linenos=table %}
+javascript:void%20function(){function%20e(e,n){[].slice.call(document.querySelectorAll(e)).forEach(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})}e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)}();
+{% endhighlight %}
 
 You can drag this right to your bookmarks bar:
 
