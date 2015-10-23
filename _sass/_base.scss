@@ -130,12 +130,16 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    /* // old color
-    background-color: #eef;
-    */
-    background-color: #333333;
+    background-color: #111111;
     color: #eeeeee;
 }
+
+.linenodiv pre, .linenodiv code {
+  background-color: #222;
+  color: #aaa;
+  vertical-align: baseline;
+}
+
 
 code {
     padding: 1px 5px;
