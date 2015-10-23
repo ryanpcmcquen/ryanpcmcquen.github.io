@@ -63,3 +63,8 @@ $on-laptop:        800px;
 ::selection {
   background-color: hsla(176, 100%, 80%, 0.4);
 }
+
+/* fix for mobile safari */
+#disqus_thread {
+  max-width: 100%;
+}
