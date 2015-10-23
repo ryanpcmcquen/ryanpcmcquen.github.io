@@ -7,24 +7,26 @@ categories: javascript
 
 As part of building my [scrollEvents](https://github.com/ryanpcmcquen/scrollEvents) library, we needed a way to limit the amount of times `scroll` events fired, so my first solution was to use a very simple throttle function a la [jonathansampson](https://github.com/jonathansampson):
 
-    // thanks to @jonathansampson
-    function throttle(callback, limit) {
-      // don't wait initially
-      var wait = false;
-      // return a throttled function
-      return function() {
-        // if not waiting, invoke function
-        if (!wait) {
-          callback.call();
-          // prevent future invocations
-          wait = true;
-          // after a period of time allow function to be invoked again
-          setTimeout(function() {
-            wait = false;
-          }, limit);
-        }
-      };
+{% highlight javascript linenos=table %}
+// thanks to @jonathansampson
+function throttle(callback, limit) {
+  // don't wait initially
+  var wait = false;
+  // return a throttled function
+  return function() {
+    // if not waiting, invoke function
+    if (!wait) {
+      callback.call();
+      // prevent future invocations
+      wait = true;
+      // after a period of time allow function to be invoked again
+      setTimeout(function() {
+        wait = false;
+      }, limit);
     }
+  };
+}
+{% endhighlight %}
 
 The problem with this `throttle()`, as pointed out by my friend [Tarabyte](https://github.com/tarabyte), is that it will not call a function on both ends.
 
@@ -36,95 +38,102 @@ Our old `throttle` function (by @jonathansampson) wouldn't call the function on 
 
 Enter [underscore.js](http://underscorejs.org/)'s `throttle`:
 
-    // taken from underscore 1.8.3
-    _.throttle = function(func, wait, options) {
-      var context, args, result;
-      var timeout = null;
-      var previous = 0;
-      if (!options) options = {};
-      var later = function() {
-        previous = options.leading === false ? 0 : _.now();
+{% highlight javascript linenos=table %}
+// taken from underscore 1.8.3
+_.throttle = function(func, wait, options) {
+  var context, args, result;
+  var timeout = null;
+  var previous = 0;
+  if (!options) options = {};
+  var later = function() {
+    previous = options.leading === false ? 0 : _.now();
+    timeout = null;
+    result = func.apply(context, args);
+    if (!timeout) context = args = null;
+  };
+  return function() {
+    var now = _.now();
+    if (!previous && options.leading === false) previous = now;
+    var remaining = wait - (now - previous);
+    context = this;
+    args = arguments;
+    if (remaining <= 0 || remaining > wait) {
+      if (timeout) {
+        clearTimeout(timeout);
         timeout = null;
-        result = func.apply(context, args);
-        if (!timeout) context = args = null;
-      };
-      return function() {
-        var now = _.now();
-        if (!previous && options.leading === false) previous = now;
-        var remaining = wait - (now - previous);
-        context = this;
-        args = arguments;
-        if (remaining <= 0 || remaining > wait) {
-          if (timeout) {
-            clearTimeout(timeout);
-            timeout = null;
-          }
-          previous = now;
-          result = func.apply(context, args);
-          if (!timeout) context = args = null;
-        } else if (!timeout && options.trailing !== false) {
-          timeout = setTimeout(later, remaining);
-        }
-        return result;
-      };
-    };
+      }
+      previous = now;
+      result = func.apply(context, args);
+      if (!timeout) context = args = null;
+    } else if (!timeout && options.trailing !== false) {
+      timeout = setTimeout(later, remaining);
+    }
+    return result;
+  };
+};
+{% endhighlight %}
 
 For anyone keeping score, I also looked at the throttle function for [lodash](https://lodash.com/), but that returns a `debounce` function, so making it modular would have required quite a bit more surgery:
 
-
-    // taken from lodash 3.10.1
-    function throttle(func, wait, options) {
-      var leading = true,
-        trailing = true;
-      if (typeof func != 'function') {
-        throw new TypeError(FUNC_ERROR_TEXT);
-      }
-      if (options === false) {
-        leading = false;
-      } else if (isObject(options)) {
-        leading = 'leading' in options ? !!options.leading : leading;
-        trailing = 'trailing' in options ? !!options.trailing : trailing;
-      }
-      return debounce(func, wait, {
-        'leading': leading,
-        'maxWait': +wait,
-        'trailing': trailing
-      });
-    }
+{% highlight javascript linenos=table %}
+// taken from lodash 3.10.1
+function throttle(func, wait, options) {
+  var leading = true,
+    trailing = true;
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  if (options === false) {
+    leading = false;
+  } else if (isObject(options)) {
+    leading = 'leading' in options ? !!options.leading : leading;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+  return debounce(func, wait, {
+    'leading': leading,
+    'maxWait': +wait,
+    'trailing': trailing
+  });
+}
+{% endhighlight %}
 
 Since our own function was only used internally, we could simplify a few things, and we didn't really need the `options` argument, so we ended up with this for our `1.0.0` release of [scrollEvents](https://github.com/ryanpcmcquen/scrollEvents):
 
-    // slightly modified/simplified version of underscore.js's throttle (v1.8.3)
-    function throttle(func, wait) {
-      var timeout = null,
-        previous = 0,
-        later = function() {
-          previous = Date.now();
-          timeout = null;
-          func();
-        };
-      return function() {
-        var now = Date.now();
-        if (!previous) previous = now;
-        var remaining = wait - (now - previous);
-        if (remaining <= 0 || remaining > wait) {
-          if (timeout) {
-            clearTimeout(timeout);
-            timeout = null;
-          }
-          previous = now;
-          func();
-        } else if (!timeout) {
-          timeout = setTimeout(later, remaining);
-        }
-      };
+{% highlight javascript linenos=table %}
+// slightly modified/simplified version of underscore.js's throttle (v1.8.3)
+function throttle(func, wait) {
+  var timeout = null,
+    previous = 0,
+    later = function() {
+      previous = Date.now();
+      timeout = null;
+      func();
+    };
+  return function() {
+    var now = Date.now();
+    if (!previous) previous = now;
+    var remaining = wait - (now - previous);
+    if (remaining <= 0 || remaining > wait) {
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+      }
+      previous = now;
+      func();
+    } else if (!timeout) {
+      timeout = setTimeout(later, remaining);
     }
+  };
+}
+{% endhighlight %}
 
 The only other *underscore* function we had to implement to make this work was `_.now()` which is either `Date.now()` or `new Date().getTime()`. Since we aren't trying to support ancient browsers (read as pre-IE9), we went with the simpler `Date.now()`. Here is *underscore*'s `_.now()`:
 
-    _.now = Date.now || function() {
-      return new Date().getTime();
-    };
+{% highlight javascript linenos=table %}
+_.now = Date.now || function() {
+  return new Date().getTime();
+};
+{% endhighlight %}
 
 Feel free to use our `throttle` in your own project if you find it useful, or help us improve it in the comments below!
 
