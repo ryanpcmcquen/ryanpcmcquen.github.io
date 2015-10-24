@@ -11,7 +11,7 @@ For some reason code is displayed as a `ul`, with each line of code being a new 
 
 *UPDATE*, I improved this code [below](#UPDATE).
 
-{% highlight javascript %}
+```javascript
 [].slice.call(document.querySelectorAll('ul.code li')).forEach(function (oldMarkup) {
   var newMarkup = document.createElement('div');
   newMarkup.innerHTML = oldMarkup.innerHTML;
@@ -25,7 +25,7 @@ For some reason code is displayed as a `ul`, with each line of code being a new 
   oldMarkup.parentNode.insertBefore(newMarkup, oldMarkup);
   oldMarkup.parentNode.removeChild(oldMarkup);
 });
-{% endhighlight %}
+```
 
 To turn it into a handy bookmarklet I used Chris Zarate's excellent, open-source [Bookmarkleter](https://chriszarate.github.io/bookmarkleter/).
 
