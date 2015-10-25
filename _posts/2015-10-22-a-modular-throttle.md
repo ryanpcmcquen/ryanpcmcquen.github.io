@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Finding a modular throttle"
-date:   2015-10-22 08:55:01
+title: "Finding a modular throttle"
+date: 2015-10-22 08:55:01
 categories: javascript
 ---
 
