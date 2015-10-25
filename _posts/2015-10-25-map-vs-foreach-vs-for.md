@@ -60,7 +60,7 @@ for (var i = 0, l = arr.length; i < l; i++) {
 
 *70 characters*
 
-`.map()` and `.forEach()` are significantly less typing, they are also clearer to read, and they create their own scope, whereas the for loop leaves us with `i` and `l` hanging around after everything is done, so we would need to write even more code to clean up after our `for()` loop!
+`.map()` and `.forEach()` are significantly less typing, they are also clearer to read, and they create their own scope, whereas the `for()` loop leaves us with `i` and `l` hanging around after everything is done, so we would need to write even more code to clean up after our `for()` loop!
 
 In other words, do yourself and your friends a favor:
 
@@ -88,7 +88,7 @@ var functionalForEach = arr.forEach(function (i) {
 });
 {% endhighlight %}
 
-https://jsfiddle.net/ryanpcmcquen/tdkp2wvo/
+[Fiddle](https://jsfiddle.net/ryanpcmcquen/tdkp2wvo/)
 
 Although this is a very lame exampe, it does show the limitations of `forEach()` as opposed to `map()`.
 
