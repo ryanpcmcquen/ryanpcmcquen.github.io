@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Clean up Hackpad's print view with a JavaScript bookmarklet"
-date:   2015-10-20 20:55:01
+title: "Clean up Hackpad's print view with a JavaScript bookmarklet"
+date: 2015-10-20 20:55:01
 categories: javascript
 ---
 
