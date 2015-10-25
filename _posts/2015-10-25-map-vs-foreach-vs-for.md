@@ -76,16 +76,22 @@ The un-intended side effect you will run into with `.forEach()` is that it doesn
 var arr = [1, 2, 3];
 
 // this one works
-var functionalMap = arr.map(function (i) {
+arr.map(function (i) {
+  console.log(i);
   return i + i;
-}).map(function (i) {
+}
+// chaining!
+).map(function (i) {
   console.log(i);
 });
 
 // this one doesn't
-var functionalForEach = arr.forEach(function (i) {
+arr.forEach(function (i) {
+  console.log(i);
   return i + i;
-}).forEach(function (i) {
+}
+// this is where forEach breaks
+).forEach(function (i) {
   console.log(i);
 });
 {% endhighlight %}
