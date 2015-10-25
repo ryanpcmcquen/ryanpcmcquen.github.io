@@ -93,3 +93,7 @@ var functionalForEach = arr.forEach(function (i) {
 Although this is a very lame exampe, it does show the limitations of `forEach()` as opposed to `map()`.
 
 Let me know in the comments what you prefer and why, thanks for reading!
+
+TL;DR
+
+`.map()` > `.forEach` > `for()`
