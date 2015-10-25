@@ -96,4 +96,4 @@ Let me know in the comments what you prefer and why, thanks for reading!
 
 TL;DR
 
-`.map()` > `.forEach` > `for()`
+`.map()` > `.forEach()` > `for()`
