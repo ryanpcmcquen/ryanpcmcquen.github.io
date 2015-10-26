@@ -10,13 +10,13 @@ Recently on Twitter I noticed [Eric Elliott](https://twitter.com/_ericelliott) s
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Favor `map()` over `forEach()` when you can. Avoid side-effects.&#10;<a href="https://twitter.com/hashtag/functional?src=hash">#functional</a> <a href="https://twitter.com/hashtag/JavaScript?src=hash">#JavaScript</a></p>&mdash; Eric Elliott (@_ericelliott) <a href="https://twitter.com/_ericelliott/status/655530013631107072">October 17, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I thought I would explore this a little bit, as I almost never use `for()` loops, but I often use `forEach()`.
+I thought I would explore this a little bit, as I almost never use `for()` loops, but I often use `.forEach()`.
 
-There will always be the nay-sayers, that point out that `for()` is faster than `forEach()`, but when it comes to `map()` and `forEach()`, speed is [not an issue](https://jsperf.com/map-vs-foreach-logging/2).
+There will always be the nay-sayers, that point out that `for()` is faster than `.forEach()`, but when it comes to `.map()` and `.forEach()`, speed is [not an issue](https://jsperf.com/map-vs-foreach-logging/2).
 
 So why not just always use `for()` if it is faster? Speed is very important, but you also have to consider other things, especially as code scales.
 
-This is a great [article](http://zsoltfabok.com/blog/2012/08/javascript-foreach/), that explains some of the *gotcha's* of `for()` loops. It also points out something that you would not notice if merely viewing a `for()` vs `forEach()` test like [this](https://jsperf.com/for-vs-foreach/37). `for()` uses **more** memory than `forEach()`!
+This is a great [article](http://zsoltfabok.com/blog/2012/08/javascript-foreach/), that explains some of the *gotcha's* of `for()` loops. It also points out something that you would not notice if merely viewing a `for()` vs `.forEach()` test like [this](https://jsperf.com/for-vs-foreach/37). `for()` uses **more** memory than `.forEach()`!
 
 So which is more important? Speed or memory?
 
