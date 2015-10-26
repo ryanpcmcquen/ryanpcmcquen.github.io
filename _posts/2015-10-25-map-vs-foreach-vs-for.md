@@ -98,7 +98,7 @@ arr.forEach(function (i) {
 
 [Fiddle](https://jsfiddle.net/ryanpcmcquen/tdkp2wvo/)
 
-Although this is a very lame exampe, it does show the limitations of `forEach()` as opposed to `map()`.
+Although this is a very lame exampe, it does show the limitations of `.forEach()` as opposed to `.map()`.
 
 Let me know in the comments what you prefer and why, thanks for reading!
 
