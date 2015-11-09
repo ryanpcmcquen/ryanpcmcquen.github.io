@@ -70,7 +70,7 @@ Which leads us to the next argument. Why is `.map()` better than `.forEach()`?
 
 *Better* is a strong word. If you don't know, you should probably go with `.map()`, but they each have their merits, and I like the answer [here](https://stackoverflow.com/questions/3034392/what-use-does-the-javascript-foreach-method-have-that-map-cant-do/4927981#4927981). Thanks to [Nick Rabinowitz](http://nickrabinowitz.com/).
 
-The un-intended side effect you will run into with `.forEach()` is that it doesn't return an array. So if you want to be the coolest, functional JavaScript programmer on the block, `.map()` is your friend. In other words, `.forEach()` terminates chains, while `.map()` allows you to chain even more calls. Making you the coolest cat around town. Thanks to [@ssorallen](https://twitter.com/ssorallen) for some tips on explaining this. Here is a terrible example of method chaining:
+The un-intended side effect you will run into with `.forEach()` is that it doesn't return an array. So if you want to be the coolest, functional JavaScript programmer on the block, `.map()` is your friend. In other words, `.forEach()` terminates chains, while `.map()` allows you to chain even more calls. Making you the coolest cat around town. Thanks to [Ross Allen](https://twitter.com/ssorallen) for some tips on explaining this. Here is a terrible example of method chaining:
 
 {% highlight javascript %}
 var arr = [1, 2, 3];
