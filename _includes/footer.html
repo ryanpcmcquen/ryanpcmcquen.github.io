@@ -53,17 +53,22 @@
     </div>
 
   </div>
-    <script>
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = 'css/main.css';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
-    </script>
-  <!--<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">-->
+  
+  <!--------------------------------------------------------------------------->
+  <!---------------- DEFERS CSS LOADING TO IMPROVE PAGE SPEED ----------------->
+  <!------------------------------- THANKS TO: -------------------------------->
+  <!-- https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery -->
+  <!--------------------------------------------------------------------------->
+  <script>
+    var cb = function() {
+      var l = document.createElement('link'); l.rel = 'stylesheet';
+      l.href = 'css/main.css';
+      var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);
+  </script>
 
 </footer>
