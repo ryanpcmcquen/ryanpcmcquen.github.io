@@ -12,24 +12,24 @@ To use it, just put the selector inside `querySelectorAll()` on the `elementArra
 If you haven't used `querySelectorAll()`, you owe it to yourself to read the [MDN article](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll).
 
 {% highlight javascript %}
-window.addEventListener('load',
-  function () {
+(function() {
+  window.addEventListener('load', function() {
     // declare the height array here since we need it
     // inside multiple functions
     var elementHeightArray = [],
       // convert the collection into an array so we can forEach() over it
       elementArray = [].slice.call(document.querySelectorAll('.foobar'));
-    elementArray.forEach(function (i) {
+    elementArray.forEach(function(i) {
       elementHeightArray.push(i.clientHeight);
     });
     // get the tallest height
     var maxElementHeight = Math.max.apply(Math, elementHeightArray);
     // apply that height to all elements
-    elementArray.forEach(function (i) {
+    elementArray.forEach(function(i) {
       i.style.height = maxElementHeight + "px";
     });
-  }
-);
+  });
+}());
 {% endhighlight %}
 
 ### ALTERNATE SOLUTION (thanks to [Tarabyte](https://github.com/Tarabyte), added 2015.10.21)
