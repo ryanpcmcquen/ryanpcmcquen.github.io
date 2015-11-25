@@ -28,7 +28,7 @@ Need to copy text without flash?
 
 Need nerdy placeholders?
 
-[//yogifil.la](//yogifil.la) & [//makelin.us](//makelin.us)
+[yogifil.la](https://yogifil.la) & [makelin.us](https://makelin.us)
 
 How about image optimization?
 
