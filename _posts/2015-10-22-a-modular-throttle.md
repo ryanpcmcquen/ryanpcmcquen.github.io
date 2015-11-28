@@ -5,6 +5,8 @@ date: 2015-10-22 08:55:01
 categories: javascript
 ---
 
+#### UPDATE: 2015.11.28 = I have since written a new debounce/throttle library named [odis](https://github.com/ryanpcmcquen/odis).
+
 As part of building my [scrollEvents](https://github.com/ryanpcmcquen/scrollEvents) library, we needed a way to limit the amount of times `scroll` events fired, so my first solution was to use a very simple throttle function a la [jonathansampson](https://github.com/jonathansampson):
 
 {% highlight javascript %}
