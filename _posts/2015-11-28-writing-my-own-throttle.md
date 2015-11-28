@@ -112,7 +112,7 @@ function modDebounce(func) {
 }
 {% endhighlight %}
 
-Now this is pretty much complete, but I think code should have a bit of attitude. So I decided to have my throttle tell a story. Enter [Odis](https://github.com/ryanpcmcquen/odis). Odis is the Latin god of modular limitation, let's take a short look at the reusable version of [odis](https://github.com/ryanpcmcquen/odis) you can drop right inside of your library today:
+Now this is pretty much complete, but I think code should have a bit of attitude. So I decided to have my throttle tell a story. Enter [odis](https://github.com/ryanpcmcquen/odis). Odis is the Latin god of modular limitation, let's take a short look at the reusable version of [odis](https://github.com/ryanpcmcquen/odis) you can drop right inside of your library today:
 
 {% highlight javascript %}
   var odis = {
@@ -153,7 +153,7 @@ Now this is pretty much complete, but I think code should have a bit of attitude
   };
 {% endhighlight %}
 
-You'll notice that we have defaults for both `delay` arguments now, which is nice, and we are only creating one global object (or none if you use this internally).
+You'll notice that we have defaults for both `delay` arguments now (the last argument for a function *should* be optional), and we are only creating one global object (or none if you use this internally).
 
 Find out more about [odis](https://github.com/ryanpcmcquen/odis) from his [README](https://github.com/ryanpcmcquen/odis/blob/master/README.md).
 
