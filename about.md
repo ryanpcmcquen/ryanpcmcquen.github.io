@@ -17,6 +17,13 @@ I write code.
 
 * * *
 
+Need a lightweight & modular debounce/throttle?
+
+[Odis](https://github.com/ryanpcmcquen/odis)
+
+Want to reduce the boilerplate code you write for event listeners?
+
+[eventBoiler](https://github.com/ryanpcmcquen/eventBoiler)
 
 Want to easily do stuff on scroll events?
 
