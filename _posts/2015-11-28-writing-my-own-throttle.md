@@ -5,7 +5,7 @@ date: 2015-11-28 15:11:31
 categories: javascript
 ---
 
-I [wrote recently](https://ryanpcmcquen.org/javascript/2015/10/22/a-modular-throttle.html) about finding a modular throttle function. For some reason I just wasn't happy with using that one, primarily because it is a rewrite of Underscore.js' throttle, and not something I wrote myself. I don't mean any offense to the Underscore project, I think they do great work, but I really wanted to understand this 'low-level' function. For me, doing *is* understanding.
+I [wrote recently](https://ryanpcmcquen.org/javascript/2015/10/22/a-modular-throttle.html) about finding a modular throttle function. I wasn't happy using that one, primarily because it is a rewrite of the [Underscore.js](http://underscorejs.org/) [throttle](http://underscorejs.org/docs/underscore.html#section-82). The Underscore project does great work, but I really wanted to understand this 'low-level' function. For me, doing *is* understanding. Furthermore, Underscore's *throttle* relies on `Date.now()`, which gives it a kind of 'memory'. Its behavior isn't consistent between the first time you fire it, and firing it after waiting a while. A throttle's *throttling* should always be relative.
 
 So I have been researching and sampling various throttle functions since then. I appreciated some from a readability angle, but they had issues. They [wouldn't fire on the trailing edge](http://sampsonblog.com/749/simple-throttle-function). Or they [modified the user's function](https://www.nczonline.net/blog/2007/11/30/the-throttle-function/) (and weren't even a throttle, Zakas' *throttle* is actually a debounce).
 
@@ -112,7 +112,7 @@ function modDebounce(func) {
 }
 {% endhighlight %}
 
-Now this is pretty much complete, but I think code should have a bit of attitude. So I decided to have my throttle tell a story. Enter [odis](https://github.com/ryanpcmcquen/odis). Odis is the Latin god of modular limitation, let's take a short look at the reusable version of [odis](https://github.com/ryanpcmcquen/odis) you can drop right inside of your library today:
+Now this is pretty much complete, but I think code should have a bit of attitude. So I decided to have my throttle tell a story. Enter [Odis](https://github.com/ryanpcmcquen/odis). Odis is the Latin god of modular limitation, let's take a short look at the reusable version of [Odis](https://github.com/ryanpcmcquen/odis) you can drop right inside of your library today:
 
 {% highlight javascript %}
   var odis = {
@@ -155,5 +155,5 @@ Now this is pretty much complete, but I think code should have a bit of attitude
 
 You'll notice that we have defaults for both `delay` arguments now (the last argument for a function *should* be optional), and we are only creating one global object (or none if you use this internally).
 
-Find out more about [odis](https://github.com/ryanpcmcquen/odis) from his [README](https://github.com/ryanpcmcquen/odis/blob/master/README.md).
+Find out more about [Odis](https://github.com/ryanpcmcquen/odis) from his [README](https://github.com/ryanpcmcquen/odis/blob/master/README.md).
 
