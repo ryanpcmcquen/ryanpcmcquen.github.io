@@ -15,6 +15,12 @@ So I thought, what if I wrote something simple, pure JavaScript, that would just
 
 Here [it is](https://github.com/ryanpcmcquen/workflowyCodeFormatter)! At just a few kilobytes of pure JavaScript (under 1KB [minified](https://github.com/ryanpcmcquen/workflowyCodeFormatter/blob/master/workflowyCodeFormatter.min.js)!).
 
+**Before**:
+![before wcf](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/before_WCF__1.jpg)
+
+**After**:
+![after wcf](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/after_WCF__1.jpg)
+
 I also was fortunate enough to get an awesome [graphic designer](http://www.corriblair.com/) to put together some beautiful artwork for it:
 
 ![WorkFlowy code formatter marquee](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/wcf_marquee.png)
