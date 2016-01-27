@@ -76,3 +76,30 @@ javascript:void%20function(){function%20e(e,n){[].slice.call(document.querySelec
 You can drag this right to your bookmarks bar:
 
 <a href="javascript:void%20function(){function%20e(e,n){[].slice.call(document.querySelectorAll(e)).forEach(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})}e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)}();">cleanUpHackpad</a>
+
+
+### UPDATE 2016.01.26:
+
+And here's an even better version. I wonder how many times I will rewrite this code ...
+
+{% highlight javascript %}
+/*jslint browser:true, white:true*/
+(function () {
+  'use strict';
+  var cleanUpHackpadMarkup = function (selector, elementType) {
+    var selectorArray = Array.prototype.slice.call(document.querySelectorAll(selector));
+    selectorArray.map(function (oldMarkup) {
+      var newMarkup = document.createElement(elementType);
+      newMarkup.innerHTML = oldMarkup.innerHTML;
+      oldMarkup.parentNode.insertBefore(newMarkup, oldMarkup);
+      oldMarkup.parentNode.removeChild(oldMarkup);
+    });
+  };
+  cleanUpHackpadMarkup('ul.code li', 'div');
+  cleanUpHackpadMarkup('ul.code', 'code');
+}());
+{% endhighlight %}
+
+Go ahead, drag it up there:
+
+<a href="javascript:void%20function(){(function(){%22use%20strict%22;var%20e=function(e,n){var%20o=Array.prototype.slice.call(document.querySelectorAll(e));o.map(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})};e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)})()}();">cleanUpHackpad</a>
