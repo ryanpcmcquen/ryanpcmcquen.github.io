@@ -85,7 +85,9 @@ And here's an even better version. I wonder how many times I will rewrite this c
 {% highlight javascript %}
 /*jslint browser:true, white:true*/
 (function () {
-  'use strict';
+  // noop void to keep github's liquid template from getting confused
+  void(0);
+  "use strict";
   var cleanUpHackpadMarkup = function (selector, elementType) {
     var selectorArray = Array.prototype.slice.call(document.querySelectorAll(selector));
     selectorArray.map(function (oldMarkup) {
@@ -102,4 +104,4 @@ And here's an even better version. I wonder how many times I will rewrite this c
 
 Go ahead, drag it up there:
 
-<a href="javascript:void%20function(){(function(){%22use%20strict%22;var%20e=function(e,n){var%20o=Array.prototype.slice.call(document.querySelectorAll(e));o.map(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})};e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)})()}();">cleanUpHackpad</a>
+<a href="javascript:void%20function(){(function(){var%20e=function(e,n){var%20o=Array.prototype.slice.call(document.querySelectorAll(e));o.map(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})};e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)})()}();">cleanUpHackpad</a>
