@@ -17,6 +17,10 @@ I write code.
 
 * * *
 
+Want to syntax highlight code in [WorkFlowy](https://workflowy.com/)?
+
+[workflowyCodeFormatter](https://github.com/ryanpcmcquen/workflowyCodeFormatter)
+
 Need a lightweight & modular debounce/throttle?
 
 [Odis](https://github.com/ryanpcmcquen/odis)
