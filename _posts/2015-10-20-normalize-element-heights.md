@@ -11,7 +11,7 @@ To use it, just put the selector inside `querySelectorAll()` on the `elementArra
 
 If you haven't used `querySelectorAll()`, you owe it to yourself to read the [MDN article](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll).
 
-{% highlight javascript %}
+```javascript
 (function() {
   window.addEventListener('load', function() {
     // declare the height array here since we need it
@@ -30,11 +30,11 @@ If you haven't used `querySelectorAll()`, you owe it to yourself to read the [MD
     });
   });
 }());
-{% endhighlight %}
+```
 
 ### ALTERNATE SOLUTION (thanks to [Tarabyte](https://github.com/Tarabyte), added 2015.10.21)
 
-{% highlight javascript %}
+```javascript
 window.addEventListener('load', function() {
   var max = 0,
     elements = document.querySelectorAll('.foobar');
@@ -47,6 +47,6 @@ window.addEventListener('load', function() {
     };
   }, function() {})(max + 'px');
 });
-{% endhighlight %}
+```
 
 [Speed comparison of the solutions.](https://jsperf.com/compare-height-normalizing-solutions)
