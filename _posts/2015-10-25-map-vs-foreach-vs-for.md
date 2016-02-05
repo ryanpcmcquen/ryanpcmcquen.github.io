@@ -26,37 +26,37 @@ Let's take a look at a really basic example:
 
 Consider this array:
 
-{% highlight javascript %}
+```javascript
 var arr = [1, 2, 3];
-{% endhighlight %}
+```
 
 `.map()`:
 
-{% highlight javascript %}
+```javascript
 arr.map(function(i) {
   console.log(i);
 });
-{% endhighlight %}
+```
 
 *43 characters*
 
 `.forEach()`:
 
-{% highlight javascript %}
+```javascript
 arr.forEach(function(i) {
   console.log(i);
 });
-{% endhighlight %}
+```
 
 *47 characters*
 
 `for()`:
 
-{% highlight javascript %}
+```javascript
 for (var i = 0, l = arr.length; i < l; i++) {
   console.log(arr[i]);
 }
-{% endhighlight %}
+```
 
 *70 characters*
 
@@ -72,7 +72,7 @@ Which leads us to the next argument. Why is `.map()` better than `.forEach()`?
 
 The un-intended side effect you will run into with `.forEach()` is that it doesn't return an array. So if you want to be the coolest, functional JavaScript programmer on the block, `.map()` is your friend. In other words, `.forEach()` terminates chains, while `.map()` allows you to chain even more calls. Making you the coolest cat around town. Thanks to [Ross Allen](https://twitter.com/ssorallen) for some tips on explaining this. Here is a terrible example of method chaining:
 
-{% highlight javascript %}
+```javascript
 var arr = [1, 2, 3];
 
 // this one works
@@ -94,7 +94,7 @@ arr.forEach(function (i) {
 ).forEach(function (i) {
   console.log(i);
 });
-{% endhighlight %}
+```
 
 [Fiddle](https://jsfiddle.net/ryanpcmcquen/tdkp2wvo/)
 
