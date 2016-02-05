@@ -50,3 +50,10 @@ window.addEventListener('load', function() {
 ```
 
 [Speed comparison of the solutions.](https://jsperf.com/compare-height-normalizing-solutions)
+
+### UPDATE 2016.02.04:
+
+I libraried this code:
+
+<script src="http://gist-it.appspot.com/https://raw.githubusercontent.com/ryanpcmcquen/normalizeHeights.js/master/normalizeHeights.js"></script>
+
