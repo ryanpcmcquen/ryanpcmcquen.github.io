@@ -102,4 +102,6 @@ And here's an even better version. I wonder how many times I will rewrite this c
 
 Go ahead, drag it up there:
 
+{% raw %}
 <a href="javascript:void%20function(){(function(){%22use%20strict%22;var%20e=function(e,n){var%20o=Array.prototype.slice.call(document.querySelectorAll(e));o.map(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})};e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)})()}();">cleanUpHackpad</a>
+{% endraw %}
