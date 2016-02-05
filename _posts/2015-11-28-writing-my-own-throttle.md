@@ -11,7 +11,7 @@ So I have been researching and sampling various throttle functions since then. I
 
 So I have been going back and forth on throttle ideas. Writing them out on my whiteboard, on notebook paper before I fall asleep, testing them in zero gravity, et cetera. I have meditated on all things throttle. Why? Because a throttle is rudimentary to so many libraries, I could not continue writing JavaScript libs until I had a throttle I could call my own. Until I had a throttle I could easily write and understand from memory. The other day I realized that the issue with Sampson's `throttle()` could be solved by combining it with Zakas' `debounce()`. So after weeks of trying things that didn't work at all, I came up with this:
 
-{% highlight javascript %}
+```javascript
 (function() {
   'use strict';
   var modThrottle = function(func, delay) {
@@ -29,11 +29,11 @@ So I have been going back and forth on throttle ideas. Writing them out on my wh
   };
   window.modThrottle = modThrottle;
 }());
-{% endhighlight %}
+```
 
 What I don't like is that it modify's the user's function, then I realized that could be worked around by cloning the function with `bind()`.
 
-{% highlight javascript %}
+```javascript
 (function() {
   'use strict';
   var modThrottle = function(func, delay) {
@@ -52,11 +52,11 @@ What I don't like is that it modify's the user's function, then I realized that 
   };
   window.modThrottle = modThrottle;
 }());
-{% endhighlight %}
+```
 
 Much better! Now we aren't modifying the function we bring in. That was just messy. But wait, if you're thinking, why not just use a `var`, you're right on the money!
 
-{% highlight javascript %}
+```javascript
 (function() {
   'use strict';
   var modThrottle = function(func, delay) {
@@ -75,11 +75,11 @@ Much better! Now we aren't modifying the function we bring in. That was just mes
   };
   window.modThrottle = modThrottle;
 }());
-{% endhighlight %}
+```
 
 Now the code is simple, lightweight, readable, and isn't violating any best practices. This `throttle()` could be used internally like so:
 
-{% highlight javascript %}
+```javascript
 function modThrottle(func, delay) {
   'use strict';
   var waiting = false,
@@ -95,11 +95,11 @@ function modThrottle(func, delay) {
     }
   };
 }
-{% endhighlight %}
+```
 
 You can also easily reduce this to a `debounce()`:
 
-{% highlight javascript %}
+```javascript
 function modDebounce(func) {
   'use strict';
   var funcTimeoutId;
@@ -110,11 +110,11 @@ function modDebounce(func) {
     }, 210);
   };
 }
-{% endhighlight %}
+```
 
 Now this is pretty much complete, but I think code should have a bit of attitude. So I decided to have my throttle tell a story. Enter [Odis](https://github.com/ryanpcmcquen/odis). Odis is the Latin god of modular limitation, let's take a short look at the reusable version of [Odis](https://github.com/ryanpcmcquen/odis) you can drop right inside of your library today:
 
-{% highlight javascript %}
+```javascript
 var odis = {
   /* odis v0.1.2 by ryanpcmcquen */
   debounce: function(func, delay) {
@@ -149,7 +149,7 @@ var odis = {
     };
   }
 };
-{% endhighlight %}
+```
 
 You'll notice that we have defaults for both `delay` arguments now (the last argument for a function *should* be optional), and we are only creating one global object (or none if you use this internally).
 
