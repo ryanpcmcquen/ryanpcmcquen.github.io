@@ -11,7 +11,7 @@ For some reason code is displayed as a `ul`, with each line of code being a new 
 
 *UPDATE*, I improved this code [below](#UPDATE).
 
-{% highlight javascript %}
+```javascript
 [].slice.call(document.querySelectorAll('ul.code li')).forEach(function (oldMarkup) {
   var newMarkup = document.createElement('div');
   newMarkup.innerHTML = oldMarkup.innerHTML;
@@ -25,15 +25,15 @@ For some reason code is displayed as a `ul`, with each line of code being a new 
   oldMarkup.parentNode.insertBefore(newMarkup, oldMarkup);
   oldMarkup.parentNode.removeChild(oldMarkup);
 });
-{% endhighlight %}
+```
 
 To turn it into a handy bookmarklet I used Chris Zarate's excellent, open-source [Bookmarkleter](https://chriszarate.github.io/bookmarkleter/).
 
 Here is the bookmarklet below:
 
-{% highlight javascript %}
+```javascript
 javascript:void%20function(){[].slice.call(document.querySelectorAll(%22ul.code%20li%22)).forEach(function(e){var%20n=document.createElement(%22div%22);n.innerHTML=e.innerHTML,e.parentNode.insertBefore(n,e),e.parentNode.removeChild(e)}),[].slice.call(document.querySelectorAll(%22ul.code%22)).forEach(function(e){var%20n=document.createElement(%22code%22);n.innerHTML=e.innerHTML,e.parentNode.insertBefore(n,e),e.parentNode.removeChild(e)})}();
-{% endhighlight %}
+```
 
 I call it `cleanUpHackpad`.
 
@@ -54,7 +54,7 @@ Although, this could all be for naught as I have filed an [issue](https://github
 
 The above code is a perfect example of violating the classic programmer paradigm of [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Here is a much cleaner version:
 
-{% highlight javascript %}
+```javascript
 function cleanUpHackpadMarkup(selector, elementType) {
   [].slice.call(document.querySelectorAll(selector)).forEach(function(oldMarkup) {
     var newMarkup = document.createElement(elementType);
@@ -65,13 +65,13 @@ function cleanUpHackpadMarkup(selector, elementType) {
 }
 cleanUpHackpadMarkup('ul.code li', 'div');
 cleanUpHackpadMarkup('ul.code', 'code');
-{% endhighlight %}
+```
 
 And the new bookmarklet:
 
-{% highlight javascript %}
+```javascript
 javascript:void%20function(){function%20e(e,n){[].slice.call(document.querySelectorAll(e)).forEach(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})}e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)}();
-{% endhighlight %}
+```
 
 You can drag this right to your bookmarks bar:
 
@@ -82,7 +82,7 @@ You can drag this right to your bookmarks bar:
 
 And here's an even better version. I wonder how many times I will rewrite this code ...
 
-{% highlight javascript %}
+```javascript
 /*jslint browser:true, white:true*/
 (function () {
   "use strict";
@@ -98,10 +98,8 @@ And here's an even better version. I wonder how many times I will rewrite this c
   cleanUpHackpadMarkup('ul.code li', 'div');
   cleanUpHackpadMarkup('ul.code', 'code');
 }());
-{% endhighlight %}
+```
 
 Go ahead, drag it up there:
 
-{% raw %}
 <a href="javascript:void%20function(){(function(){%22use%20strict%22;var%20e=function(e,n){var%20o=Array.prototype.slice.call(document.querySelectorAll(e));o.map(function(e){var%20o=document.createElement(n);o.innerHTML=e.innerHTML,e.parentNode.insertBefore(o,e),e.parentNode.removeChild(e)})};e(%22ul.code%20li%22,%22div%22),e(%22ul.code%22,%22code%22)})()}();">cleanUpHackpad</a>
-{% endraw %}
