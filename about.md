@@ -17,7 +17,7 @@ I write code.
 
 * * *
 
-Want to syntax highlight code in [WorkFlowy](https://workflowy.com/)?
+Want to format code in WorkFlowy?
 
 [workflowyCodeFormatter](https://github.com/ryanpcmcquen/workflowyCodeFormatter)
 
