@@ -55,5 +55,5 @@ window.addEventListener('load', function() {
 
 I libraried this code:
 
-<script src="https://gist-it.appspot.com/https://github.com/ryanpcmcquen/normalizeHeights.js/blob/master/normalizeHeights.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/ryanpcmcquen/normalizeStuff.js/blob/master/normalizeStuff.js"></script>
 
