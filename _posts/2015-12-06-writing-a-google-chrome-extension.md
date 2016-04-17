@@ -13,7 +13,7 @@ But it sucks. There is just no other way to put it. You can't edit the text in c
 
 So I thought, what if I wrote something simple, pure JavaScript, that would just render code? I didn't need full Markdown support, WorkFlowy already has bold and italic.
 
-Here [it is](https://github.com/ryanpcmcquen/workflowyCodeFormatter)! At just a few kilobytes of pure JavaScript (under 1KB [minified](https://github.com/ryanpcmcquen/workflowyCodeFormatter/blob/master/workflowyCodeFormatter.min.js)!).
+Here [it is](https://github.com/ryanpcmcquen/workflowyCodeFormatter), just a few kilobytes of pure JavaScript.
 
 **Before**:
 ![before wcf](https://raw.githubusercontent.com/ryanpcmcquen/workflowyCodeFormatter/master/before_WCF__1.jpg)
