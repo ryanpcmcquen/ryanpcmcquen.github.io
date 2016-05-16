@@ -5,7 +5,7 @@ date: 2016-05-15 20:44:01
 categories: javascript
 ---
 
-As far as confusing parts of JavaScript go, function declarations are near the top. Due to hoisting, they allow developers to write functions wherever they please, regardless of where they get executed. Did anyone ever think this was a good idea? Has anyone seen a case where hoisting paid off?
+As far as confusing parts of JavaScript rank, function declarations are near the top. Due to hoisting, they allow developers to write functions wherever they please, regardless of where they get executed. Did anyone ever think this was a good idea? Has anyone seen a case where hoisting paid off?
 
 I certainly have not. Thankfully, arrow functions cannot be named, and hence, cannot be used as function declarations. So I propose this as the only way you should EVER write functions in ES6+:
 
