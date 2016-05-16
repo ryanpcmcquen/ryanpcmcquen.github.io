@@ -23,4 +23,4 @@ const addTwo = (num) => num + 2;
 
 Although this one-liner may seem like a great idea, when someone else has to update your code and expand this function, you have decreased that maintainability. What if this future developer did not know a `return` was implied, and added curly braces? They will discover through debugging that something is amiss, but the code was not helpful in determining that because of a convenient shortcut.
 
-Using these 'clever' shortcuts often seems like a great idea, but know that code does not live in a bubble, and a lot of code will be re-touched throughout its life. Consider your future self, or a future friend who may have to maintain your code, sometimes a little long-handedness will save a lot of frustration.
+Using these 'clever' shortcuts often seems like a great idea, but know that code does not live in a bubble, and a lot of code will be re-touched throughout its life. Consider your future self, or a future friend who may have to maintain your code. Sometimes, a little long-handedness will save a lot of frustration.
