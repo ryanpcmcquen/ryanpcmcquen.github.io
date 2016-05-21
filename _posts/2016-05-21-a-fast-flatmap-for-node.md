@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "flatMap for node"
-date: 2016-05-21 13:12:01
+title: "A fast flatMap for node."
+date: 2016-05-21 13:22:01
 categories: javascript
 ---
 
