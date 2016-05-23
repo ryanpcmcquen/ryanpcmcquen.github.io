@@ -20,9 +20,22 @@ After some testing and research I have published my first [npm module](https://w
 
       // specify the source of the notebook
       source: "\
-const flatMap = require(\"flatmap-fast\");\n\
-const arr = [[], [1], [2, 3]];\n\
-flatMap(arr);\
+(() => {\n\
+  'use strict';\n\
+  const flatMap = require('flatmap-fast');\n\
+\n\
+  const arrNum = [\n\
+    [],\n\
+    [1],\n\
+    [2, 3]\n\
+  ];\n\
+\n\
+  return (\n\
+    flatMap(arrNum, (i) => {\n\
+      return i + i;\n\
+    })\n\
+  );\n\
+})();\n\
 ",
       nodeVersion: ">=4.x.x"
     });
@@ -32,4 +45,4 @@ flatMap(arr);\
 
 You can also write 'Notebooks' in Tonic. This is an excellent way to document and explain your code with usable and editable examples. Think of it as a combination of [Hackpad](https://hackpad.com/) and [repl.it](https://repl.it/), two of my favorite tools.
 
-As for the `flatMap`, I noticed that some of the npm `flatMap`'s did not seem very modern. Also, [speed can vary wildly](https://repl.it/CTc3) depending on the implementation. So go get your `monad` on!
+As for the `flatMap`, I noticed that some of the npm `flatMap`'s did not seem very modern. Also, speed can vary wildly depending on the implementation. So go get your `monad` on!
