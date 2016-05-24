@@ -19,24 +19,24 @@ After some testing and research I have published my first [npm module](https://w
       element: document.getElementById("flatmap-fast-example"),
 
       // specify the source of the notebook
-      source: "\
-(() => {\n\
-  'use strict';\n\
-  const flatMap = require('flatmap-fast');\n\
-\n\
-  const arrNum = [\n\
-    [],\n\
-    [1],\n\
-    [2, 3]\n\
-  ];\n\
-\n\
-  return (\n\
-    flatMap(arrNum, (i) => {\n\
-      return i + i;\n\
-    })\n\
-  );\n\
-})();\n\
-",
+      source: `
+(() => {
+  'use strict';
+  const flatMap = require('flatmap-fast');
+
+  const arrNum = [
+    [],
+    [1],
+    [2, 3]
+  ];
+
+  return (
+    flatMap(arrNum, (i) => {
+      return i + i;
+    })
+  );
+})();
+`,
       nodeVersion: ">=4.x.x"
     });
   });
