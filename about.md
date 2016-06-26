@@ -17,17 +17,17 @@ I write code.
 
 * * *
 
-Want to format code in WorkFlowy?
+Wish JavaScript had a `queryParent` function? Me too:
 
-[workflowyCodeFormatter](https://github.com/ryanpcmcquen/workflowyCodeFormatter)
+[queryparent](https://github.com/ryanpcmcquen/queryparent)
+
+Need to normalize the heights or widths of elements?
+
+[normalizeStuff.js](https://github.com/ryanpcmcquen/normalizeStuff.js)
 
 Need a lightweight & modular debounce/throttle?
 
 [Odis](https://github.com/ryanpcmcquen/odis)
-
-Want to reduce the boilerplate code you write for event listeners?
-
-[eventBoiler](https://github.com/ryanpcmcquen/eventBoiler)
 
 Want to easily do stuff on scroll events?
 
