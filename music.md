@@ -4,6 +4,6 @@ title: Music
 permalink: /music/
 ---
 
-Here's some noise:
+Here's a taste of my upcoming album:
 
-<iframe width="320" height="180" src="https://www.youtube.com/embed/4C1RDzRY-ug" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://archive.org/embed/somewhere_far_away" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
