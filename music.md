@@ -4,6 +4,6 @@ title: Music
 permalink: /music/
 ---
 
-Here's a taste of my upcoming album:
+Here's some noise:
 
-<iframe src="https://archive.org/embed/somewhere_far_away" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+<audio src="https://archive.org/download/random_20160719/when_you_wish_upon_a_star.ogg" controls></audio>
