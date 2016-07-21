@@ -1,4 +1,4 @@
-window.addEventListener('click',
+(() => {
   const scrambler = () => {
     const moniker = document.getElementById("moniker");
     const thingy = moniker.textContent;
@@ -10,5 +10,6 @@ window.addEventListener('click',
       thatChar = that[len], that[len] = that[randomNum], that[randomNum] = thatChar;
     }
     moniker.textContent = that.join("");
-  }
-);
+  };
+  window.addEventListener('click', scrambler);
+})();
