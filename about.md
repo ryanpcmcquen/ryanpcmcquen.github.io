@@ -21,6 +21,10 @@ Wish JavaScript had a `queryParent` function? Me too:
 
 [queryparent](https://github.com/ryanpcmcquen/queryparent)
 
+How about `querySibling`?
+
+[querysibling](https://github.com/ryanpcmcquen/querysibling)
+
 Need to normalize the heights or widths of elements?
 
 [normalizeStuff.js](https://github.com/ryanpcmcquen/normalizeStuff.js)
