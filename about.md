@@ -17,6 +17,10 @@ I write code.
 
 * * *
 
+Want to test performance in `node` or browser JS?
+
+[testPerf](https://github.com/ryanpcmcquen/testperf)
+
 Wish JavaScript had a `queryParent` function? Me too:
 
 [queryparent](https://github.com/ryanpcmcquen/queryparent)
