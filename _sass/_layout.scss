@@ -34,11 +34,7 @@
     .page-link {
         color: $text-color;
         line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        // &:not(:first-child) {
-        //     margin-left: 20px;
-        // }
+        text-align: center;
     }
 
     @include media-query($on-palm) {
@@ -82,7 +78,7 @@
 
         .page-link {
             display: block;
-            padding: 5px 10px;
+            padding: 5px 0;
         }
     }
 }
