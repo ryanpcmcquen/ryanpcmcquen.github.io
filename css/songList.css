@@ -1,9 +1,15 @@
 .songList {
   list-style-type: kannada;
+  display: inline-block;
 }
 
 .songList li {
   cursor: pointer;
+}
+
+.songList li:hover {
+  background-color: hsla(163, 100%, 22%, 0.2);
+  border-radius: 3px;
 }
 
 .songList li:first-child {
