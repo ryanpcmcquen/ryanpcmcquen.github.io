@@ -1,0 +1,7 @@
+.songList {
+  list-style-type: kannada;
+}
+
+.songList li {
+  cursor: pointer;
+}
