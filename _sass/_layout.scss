@@ -37,8 +37,11 @@
         text-align: center;
         border-width: 1px;
         border-radius: 1px;
-        border-style: solid;
+        border-style: inset;
         border-color: hsla(0, 0%, 0%, 0.1);
+    }
+    .page-link:hover {
+        box-shadow: 1px 1px 1px #333;
     }
 
     @include media-query($on-palm) {
