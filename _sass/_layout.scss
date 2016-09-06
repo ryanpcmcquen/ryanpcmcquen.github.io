@@ -35,6 +35,10 @@
         color: $text-color;
         line-height: $base-line-height;
         text-align: center;
+        border-width: 1px;
+        border-radius: 1px;
+        border-style: solid;
+        border-color: hsla(0, 0%, 0%, 0.1);
     }
 
     @include media-query($on-palm) {
