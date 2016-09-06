@@ -1,5 +1,6 @@
 .songList {
   list-style-type: kannada;
+  list-style-position: inside;
   display: inline-block;
 }
 
