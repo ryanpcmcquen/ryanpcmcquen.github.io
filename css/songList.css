@@ -5,3 +5,7 @@
 .songList li {
   cursor: pointer;
 }
+
+.songList li:first-child {
+  text-decoration: underline;
+}
