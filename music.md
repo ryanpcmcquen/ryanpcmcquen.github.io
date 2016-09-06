@@ -2,8 +2,20 @@
 layout: page
 title: Music
 permalink: /music/
+custom_css: songList
+custom_js: songz
 ---
 
-Here's some noise:
+Here's my jazz demo:
 
-<iframe src="https://archive.org/embed/plays_some_standards&playlist=1&list_height=150" width="500" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+<audio controls="controls" id="currentSong" src="https://archive.org/download/plays_some_standards/embraceable_you.mp3"> Your browser does not support the <code>audio</code> element.
+</audio>
+
+<ul class="songList">
+  <li>Embraceable you</li>
+  <li>In bloom</li>
+  <li>In the wee small hours of the morning</li>
+  <li>The way you look tonight</li>
+</ul>
+
+<a href="https://archive.org/compress/plays_some_standards/formats=VBR%20MP3&file=/plays_some_standards.zip" download>DownloadIt</a>
