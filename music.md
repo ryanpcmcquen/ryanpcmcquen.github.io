@@ -6,4 +6,4 @@ permalink: /music/
 
 Here's some noise:
 
-<iframe src="https://archive.org/embed/plays_some_standards" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+<iframe src="https://archive.org/embed/plays_some_standards&playlist=1" width="500" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
