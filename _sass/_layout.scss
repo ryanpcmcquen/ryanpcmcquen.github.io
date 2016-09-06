@@ -40,9 +40,10 @@
         border-radius: 1px;
         border-style: inset;
         border-color: hsla(0, 0%, 0%, 0.1);
+        padding: 2px;
     }
     .page-link:hover {
-        box-shadow: 1px 1px 1px #333;
+        box-shadow: 1px 1px 1px 1px #333;
     }
 
     @include media-query($on-palm) {
