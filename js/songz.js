@@ -7,5 +7,6 @@ songs.map((s) => {
       i.style.textDecoration = 'none';
     });
     s.style.textDecoration = 'underline';
+    currentSong.play();
   });
 });
