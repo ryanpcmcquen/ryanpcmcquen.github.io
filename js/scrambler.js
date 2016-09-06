@@ -1,8 +1,9 @@
 (() => {
   const scrambler = () => {
     const moniker = document.getElementById("moniker");
+    let thingy = moniker.textContent;
     const thatArr = thingy.split('');
-    moniker.textContent = thatArr.sort(() => {
+    thingy = thatArr.sort(() => {
       return 1 - Math.random();
     }).join('');
   };
