@@ -8,7 +8,7 @@ custom_js: songz
 
 Here's my jazz demo:
 
-<audio controls="controls" id="currentSong" src="https://archive.org/download/plays_some_standards/embraceable_you.mp3"> Your browser does not support the <code>audio</code> element.  :^(
+<audio controls="controls" id="currentSong" src="https://archive.org/download/plays_some_standards/sunny.mp3"> Your browser does not support the <code>audio</code> element.  :^(
 </audio>
 
 <p></p>
