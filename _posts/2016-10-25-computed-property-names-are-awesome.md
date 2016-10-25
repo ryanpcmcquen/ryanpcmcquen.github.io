@@ -14,7 +14,7 @@ In optimizing some of my own code for work, I realized that one object's structu
 Here's how it looks without computed property names:
 
 ```js
-var dragonTypes = {
+const dragonTypes = {
   123: {
     physical: {
       weight: 2300
@@ -38,7 +38,7 @@ var dragonTypes = {
 Because of the existing data structure, you _must_ refer to these Dragons by their numeric types, but you have a secret weapon with computed property names!
 
 ```js
-var dragons = {
+const dragons = {
   bigFoo: 123,
   lilBar: 456
 };
@@ -47,7 +47,7 @@ var dragons = {
 And now you can write this!
 
 ```js
-var dragonTypes = {
+const dragonTypes = {
   [dragons.bigFoo]: {
     physical: {
       weight: 2300
