@@ -5,7 +5,7 @@ date: 2016-10-25 11:45:01
 categories: javascript
 ---
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names
+[MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)
 
 This is one of the best features of ES6 I have seen, because it allows you to write more declarative and beautiful code. In fact, I was a bit surprised to find this was not already part of JavaScript.
 
