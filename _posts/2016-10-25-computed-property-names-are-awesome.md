@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dynamic object keys (Computed property names) are awesome!"
+title: "Dynamic object keys (computed property names) are awesome!"
 date: 2016-10-25 11:45:01
 categories: javascript
 ---
