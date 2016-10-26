@@ -5,8 +5,6 @@ date: 2016-10-25 11:45:01
 categories: javascript
 ---
 
-[MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)
-
 This is one of the best features of ES6 I have seen, because it allows you to write more declarative and beautiful code. In fact, I was a bit surprised to find this was not already part of JavaScript.
 
 In optimizing some of my own code for work, I realized that one object's structure relied on 'magic numbers'. Sadly, the data structure was built this way, but you can get around that in your code with _Computed property names_.
@@ -69,3 +67,5 @@ const dragonTypes = {
 ```
 
 Browser compatibility is actually pretty solid, if you are only supporting modern browsers (Chrome, Edge, Firefox and Safari), all the latest verisons of those have no problem with this code. Unfortunately Internet Explorer 11 and earlier can't handle it, spewing an _Expected identifier, string or number_ error.
+
+[MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)
