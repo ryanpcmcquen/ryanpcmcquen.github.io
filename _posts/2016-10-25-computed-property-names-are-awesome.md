@@ -78,7 +78,15 @@ const countingObj = {
   [counter + 3]: 'to',
   [counter + 4]: 'beauty.'
 };
+
+Object.keys(countingObj).map((i) => {
+  return countingObj[i];
+});
+
+// => [ 'Getting', 'ever', 'closer', 'to', 'beauty.' ]
 ```
+
+https://repl.it/EKaZ
 
 Browser compatibility is actually pretty solid, if you are only supporting modern browsers (Chrome, Edge, Firefox and Safari), all the latest verisons of those have no problem with this code. Unfortunately Internet Explorer 11 and earlier can't handle it, spewing an _Expected identifier, string or number_ error.
 
