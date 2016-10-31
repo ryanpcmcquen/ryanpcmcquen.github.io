@@ -81,12 +81,12 @@ const countingObj = {
 
 Object.keys(countingObj).map((i) => {
   return countingObj[i];
-});
+}).join(' ');
 
-// => [ 'Getting', 'ever', 'closer', 'to', 'beauty.' ]
+// => 'Getting ever closer to beauty.'
 ```
 
-https://repl.it/EKaZ
+https://repl.it/EKae
 
 Browser compatibility is actually pretty solid, if you are only supporting modern browsers (Chrome, Edge, Firefox and Safari), all the latest verisons of those have no problem with this code. Unfortunately Internet Explorer 11 and earlier can't handle it, spewing an _Expected identifier, string or number_ error.
 
