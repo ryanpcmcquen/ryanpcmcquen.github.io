@@ -7,9 +7,9 @@ categories: javascript
 
 This is one of the best features of ES6 I have seen, because it allows you to write more declarative and beautiful code. In fact, I was a bit surprised to find this was not already part of JavaScript.
 
-In optimizing some of my own code for work, I realized that one object's structure relied on 'magic numbers'. Sadly, the data structure was built this way, but you can get around that in your code with _Computed property names_.
+In optimizing some of my own code for work, I realized that one object's structure relied on 'magic numbers'. Sadly, the data structure was built this way, but you can get around that in your code with _computed property names_.
 
-Here's how it looks without computed property names:
+Here's how it looks without _computed property names_:
 
 ```js
 const dragonTypes = {
@@ -33,7 +33,7 @@ const dragonTypes = {
 };
 ```
 
-Because of the existing data structure, you _must_ refer to these Dragons by their numeric types, but you have a secret weapon with computed property names!
+Because of the existing data structure, you _must_ refer to these Dragons by their numeric types, but you have a secret weapon with _computed property names_:
 
 ```js
 const dragons = {
@@ -63,6 +63,20 @@ const dragonTypes = {
     }
   
   }
+};
+```
+
+Beyond that, you can even do expressions inside of the brackets (`[]`):
+
+```js
+let counter = 0;
+
+const countingObj = {
+  [counter]: 'Getting',
+  [counter + 1]: 'ever',
+  [counter + 2]: 'closer',
+  [counter + 3]: 'to',
+  [counter + 4]: 'beauty.'
 };
 ```
 
