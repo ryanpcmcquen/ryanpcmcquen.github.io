@@ -1,3 +1,5 @@
+<link rel="amphtml" href="https://mercury.postlight.com/amp?url=https://ryanpcmcquen.org/javascript/2016/10/25/computed-property-names-are-awesome.html">
+
 ---
 layout: post
 title: "Dynamic object keys (computed property names) are awesome!"
