@@ -1,3 +1,5 @@
+<link rel="amphtml" href="https://mercury.postlight.com/amp?url=https://ryanpcmcquen.org/javascript/2016/05/21/a-fast-flatmap-for-node.html">
+
 ---
 layout: post
 title: "A fast flatMap for node."
