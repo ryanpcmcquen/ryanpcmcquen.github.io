@@ -1,11 +1,11 @@
-<link rel="amphtml" href="https://mercury.postlight.com/amp?url=https://ryanpcmcquen.org/javascript/2016/10/25/computed-property-names-are-awesome.html">
-
 ---
 layout: post
 title: "Dynamic object keys (computed property names) are awesome!"
 date: 2016-10-25 11:45:01
 categories: javascript
 ---
+
+<link rel="amphtml" href="https://mercury.postlight.com/amp?url=https://ryanpcmcquen.org/javascript/2016/10/25/computed-property-names-are-awesome.html">
 
 This is one of the best features of ES6 I have seen, because it allows you to write more declarative and beautiful code. In fact, I was a bit surprised to find this was not already part of JavaScript.
 
