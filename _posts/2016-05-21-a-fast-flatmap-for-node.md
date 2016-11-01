@@ -1,11 +1,11 @@
-<link rel="amphtml" href="https://mercury.postlight.com/amp?url=https://ryanpcmcquen.org/javascript/2016/05/21/a-fast-flatmap-for-node.html">
-
 ---
 layout: post
 title: "A fast flatMap for node."
 date: 2016-05-21 13:22:01
 categories: javascript
 ---
+
+<link rel="amphtml" href="https://mercury.postlight.com/amp?url=https://ryanpcmcquen.org/javascript/2016/05/21/a-fast-flatmap-for-node.html">
 
 After some testing and research I have published my first [npm module](https://www.npmjs.com/package/flatmap-fast). Which also lead me to [Tonic](https://tonicdev.com/). What an amazing tool! Check out this embed:
 
