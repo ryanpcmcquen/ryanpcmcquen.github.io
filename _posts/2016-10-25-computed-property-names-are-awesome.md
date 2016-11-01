@@ -5,8 +5,6 @@ date: 2016-10-25 11:45:01
 categories: javascript
 ---
 
-<link rel="amphtml" href="https://mercury.postlight.com/amp?url=https://ryanpcmcquen.org/javascript/2016/10/25/computed-property-names-are-awesome.html">
-
 This is one of the best features of ES6 I have seen, because it allows you to write more declarative and beautiful code. In fact, I was a bit surprised to find this was not already part of JavaScript.
 
 In optimizing some of my own code for work, I realized that one object's structure relied on 'magic numbers'. Sadly, the data structure was built this way, but you can get around that in your code with _computed property names_.
