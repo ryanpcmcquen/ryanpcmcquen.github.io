@@ -5,7 +5,7 @@ date: 2016-11-12 15:08
 categories: internet
 ---
 
-Net Neutrality is a confusing concept. It involves technology. This makes it all the more difficult to explain. Because of this, there are oodles of misinformation on the subject. Most opponents of Net Neutrality do not understand what it even is.
+Net Neutrality is a confusing concept. It involves technology. This makes it all the more difficult to explain. Because of this, there are oodles of incorrect information on the subject. Most opponents of Net Neutrality do not understand what it even is.
 
 One of the simplest ways to understand Net Neutrality is to imagine ISPs as electricity providers. If Internet access was electricity and Net Neutrality was repealed, 'electricity providers' (ISPs) would be able to charge you not only for the electricity you used, but also _how_ you used that electricity. Imagine this electricity advert, wherein electricity is not considered a utility:
 
