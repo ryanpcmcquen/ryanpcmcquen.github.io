@@ -11,7 +11,9 @@ One of the simplest ways to understand Net Neutrality is to imagine ISPs as elec
 
 ---
 
-![A Net Neutrality analogy.](https://usercontent.irccloud-cdn.com/file/N6VirsrM/a_net_neutrality_analogy.png)
+![A Net Neutrality analogy.](https://usercontent.irccloud-cdn.com/file/hLvtu78c/a_net_neutrality_analogy.png)
+
+[PDF](https://usercontent.irccloud-cdn.com/file/zYxXnV8t/a_net_neutrality_analogy.pdf)
 
 ---
 
