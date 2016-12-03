@@ -43,7 +43,7 @@ Want to easily do stuff on scroll events?
 
 Need to copy text without flash?
 
-[simpleJsCopy](https://github.com/ryanpcmcquen/simpleJsCopy)
+[cheval](https://github.com/ryanpcmcquen/cheval)
 
 Need nerdy placeholders?
 
