@@ -86,7 +86,7 @@ Object.keys(countingObj).map((i) => {
 // => 'Getting ever closer to beauty.'
 ```
 
-[REPL](https://repl.it/EKae)
+[REPL](https://repl.it/EKae/1)
 
 Browser compatibility is actually pretty solid, if you are only supporting modern browsers (Chrome, Edge, Firefox and Safari), all the latest verisons of those have no problem with this code. Unfortunately Internet Explorer 11 and earlier can't handle it, spewing an _Expected identifier, string or number_ error.
 
