@@ -72,11 +72,11 @@ Beyond that, you can even do expressions inside of the brackets (`[]`):
 let counter = 0;
 
 const countingObj = {
-  [counter]: 'Getting',
-  [counter + 1]: 'ever',
-  [counter + 2]: 'closer',
-  [counter + 3]: 'to',
-  [counter + 4]: 'beauty.'
+  [counter++]: 'Getting',
+  [counter++]: 'ever',
+  [counter++]: 'closer',
+  [counter++]: 'to',
+  [counter++]: 'beauty.'
 };
 
 Object.keys(countingObj).map((i) => {
