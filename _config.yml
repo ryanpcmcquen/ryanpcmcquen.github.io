@@ -1,6 +1,6 @@
 # Site settings
 title: Ryan P.C. McQuen
-email: ryanpcmcquen@member.fsf.org
+##email: ryanpcmcquen AT member DOT fsf DOT org
 description: Hacker.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://ryanpcmcquen.org" # the base hostname & protocol for your site
