@@ -58,14 +58,25 @@
 <!-- ***************************** THANKS TO: ****************************** -->
 <!--  https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery  -->
 <!-- *********************************************************************** -->
+<noscript id="deferred-styles">
+  <link rel='stylesheet' type='text/css' href='{{ site.baseurl }}/css/main.css'>
+  <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+</noscript>
 <script>
-  var cb = function() {
-    var l = document.createElement('link'); l.rel = 'stylesheet';
-    l.href = '{{ site.baseurl }}/css/main.css';
-    var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-  };
-  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-      webkitRequestAnimationFrame || msRequestAnimationFrame;
-  if (raf) raf(cb);
-  else window.addEventListener('load', cb);
+var loadDeferredStyles = function () {
+  var addStylesNode = document.getElementById("deferred-styles");
+  var replacement = document.createElement("div");
+  replacement.innerHTML = addStylesNode.textContent;
+  document.body.appendChild(replacement)
+  addStylesNode.parentElement.removeChild(addStylesNode);
+};
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+  webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf) {
+  raf(function () {
+    window.setTimeout(loadDeferredStyles, 0);
+  });
+} else {
+  window.addEventListener('load', loadDeferredStyles);
+}
 </script>
