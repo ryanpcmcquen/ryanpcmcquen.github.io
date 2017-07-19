@@ -5,107 +5,88 @@ date: 2015-10-25 10:08:31
 categories: javascript
 ---
 
-Recently on Twitter I noticed [Eric Elliott](https://twitter.com/_ericelliott) saying this:
+Due to the amount of traffic this article still receives, it has been given a much needed refresh. For the sake of comments that happened before July 19, 2017, the original version is still available here:
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Favor `map()` over `forEach()` when you can. Avoid side-effects.&#10;<a href="https://twitter.com/hashtag/functional?src=hash">#functional</a> <a href="https://twitter.com/hashtag/JavaScript?src=hash">#JavaScript</a></p>&mdash; Eric Elliott (@_ericelliott) <a href="https://twitter.com/_ericelliott/status/655530013631107072">October 17, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://ryanpcmcquen.org/javascript/2015/10/25/DEPRECATED__map-vs-foreach-vs-for.html
 
-I thought I would explore this a little bit, as I almost never use `for()` loops, but I often use `.forEach()`.
+You may find yourself at a point where you wonder whether to use `.map()`, `.forEach()` or `for ()`.
 
-There will always be nay-sayers, who point out that `for()` is faster than `.forEach()` (this is actually not true, see UPDATE below).
+You should favor `.map()` and `.reduce()`, if you prefer the functional paradigm of programming. For other paradigms (and even in some _rare_ cases within the functional paradigm), `.forEach()` is the proper choice. `for ()` loops should be avoided unless you have determined that there is some necessary benefit they deliver to your end user that no other iteration method is capable of (such as a performance necessity). Keep in mind that while `for ()` loops may appear to be faster in some cases, they will use more memory than the native methods. Also, never forget what Donald Knuth said:
 
-Speed is important, but you have to consider other things, especially as code scales.
+>The real problem is that programmers have spent far too much time worrying about efficiency in the wrong places and at the wrong times; premature optimization is the root of all evil (or at least most of it) in programming.
 
-This is a great [article](http://zsoltfabok.com/blog/2012/08/javascript-foreach/), that explains some of the *gotcha's* of `for()` loops. It also points out something that you would not notice if merely viewing a `for()` vs `.forEach()` test like [this](https://jsperf.com/for-vs-foreach/37). `for()` uses **more** memory than `.forEach()`!
+There have been scenarios where `.forEach()` was my first instinctual choice, only to discover that using `.map()` or `.reduce()` yielded more hackable, readable and maintainable code. One such scenario was cloning the first level of an object and copying _only_ its properties.
 
-So which is more important? Speed or memory?
+Given object `foo`:
 
-Both are important, of course. Firstly, *none* of these are going to be the bottleneck in your code. Secondly, micro-optimizations aren't the way to win the war, which is more readable/hackable/maintainable?
-
-Let's take a look at a really basic example:
-
-Consider this array:
-
-```javascript
-var arr = [1, 2, 3];
+```js
+var foo = {
+    foo: 1,
+    bar: 2,
+    baz: 3
+};
 ```
 
-`.map()`:
+Procedural style:
 
-```javascript
-arr.map(function(i) {
-  console.log(i);
+```js
+var bar = {};
+Object.keys(foo).forEach(function (prop) {
+    bar[prop] = null;
 });
 ```
 
-*43 characters*
+This is readable enough, but gets reduced to one expression with `.reduce()` (functional style):
 
-`.forEach()`:
+```js
+var bar = Object.keys(foo).reduce(function (newObj, prop) {
+    newObj[prop] = null;
+    return newObj;
+}, {});
+```
 
-```javascript
-arr.forEach(function(i) {
-  console.log(i);
+This focuses all of the assignment code into one expression!
+
+---
+
+Let's take a look at another example. Say we need to produce a new array and add `1` to each value in that array:
+
+```js
+var nums = [
+    5,
+    9,
+    7
+];
+```
+
+Procedural style:
+
+```js
+nums.forEach(function (num) {
+    return num + 1;
 });
 ```
 
-*47 characters*
+Functional style:
 
-`for()`:
-
-```javascript
-for (var i = 0, l = arr.length; i < l; i++) {
-  console.log(arr[i]);
-}
+```js
+var oneBetterThanNums = nums.map(function (num) {
+    return num + 1;
+});
 ```
 
-*70 characters*
+The idea here is to avoid transforming the original array, one of the pillars of functional design is to create something new when something changes.
 
-`.map()` and `.forEach()` are significantly less typing, they are also clearer to read, and they create their own scope, whereas the `for()` loop leaves us with `i` and `l` hanging around after everything is done, so we would need to write even more code to clean up after our `for()` loop!
+`.forEach()` operates on our original array. You may be wondering why that matters. The idea is that a functional application is easier to debug because data structures are treated as immutable entities. In other words, we know what the value of `nums` will be throughout our application. In the procedural style, the `nums` value is variable, which makes debugging more difficult. Any logic which considers `nums`, will also need to consider its current state, the functional version has no such issue.
 
-In other words, do yourself and your friends a favor:
+Another benefit of the `.map()` method here, is that it allows more hackability for the future. For instance, let's say you have decided to sort that array at some point, with `.map()`, you can merely chain on the `.sort()` method!
 
-Use `.forEach()` or `.map()`.
-
-Which leads us to the next argument. Why is `.map()` better than `.forEach()`?
-
-First point for `.map()`, is that it is faster than `.forEach()`. Although I noted earlier that speed is not the only consideration, in this case neither have the inherent issues of `for` loops.
-
-Secondly, the un-intended side effect you will run into with `.forEach()` is that it doesn't return an array. So if you want to be the coolest, functional JavaScript programmer on the block, `.map()` is your friend. In other words, `.forEach()` terminates chains, while `.map()` allows you to chain even more calls. Making you the coolest cat around town. Thanks to [Ross Allen](https://twitter.com/ssorallen) for some tips on explaining this. Here is a terrible example of method chaining:
-
-```javascript
-var arr = [1, 3, 2];
-
-console.log(
-  // This one works:
-  arr
-  .map(function (i) {
-    return i + i;
-  })
-  // Chaining!
-  .sort()
-);
-// => [ 2, 4, 6 ]
-
-console.log(
-  // This one does not:
-  arr
-  .forEach(function (i) {
-    return i + i;
-  })
-  // This is where forEach breaks:
-  .sort()
-);
-// => TypeError: Cannot read property 'sort' of undefined
+```js
+var oneBetterThanNums = nums.map(function (num) {
+    return num + 1;
+}).sort();
 ```
 
-[Fiddle](https://jsfiddle.net/ryanpcmcquen/tdkp2wvo/)
+Thanks for reading!
 
-Although this is a lame example, it does show the limitations of `.forEach()` as opposed to `.map()`.
-
-Let me know in the comments what you prefer and why, thanks for reading!
-
-TL;DR
-
-`.map()` > `.forEach()` > `for()`
-
-UPDATE 2016.05.24: `.map()` is actually the fastest of all 3 in certain JavaScript engines (like [Mozilla's SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey)). I advise *always* using `map`.
+Which methods do you prefer and why?
