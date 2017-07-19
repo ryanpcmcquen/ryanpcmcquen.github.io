@@ -5,6 +5,10 @@ date: 2015-10-25 10:08:31
 categories: javascript
 ---
 
+THIS ARTICLE IS OLD AND CRUSTY! IT EXISTS ONLY FOR HISTORICAL PURPOSES. THE NEW AND SHINY VERSION IS HERE:
+
+[https://ryanpcmcquen.org/javascript/2015/10/25/map-vs-foreach-vs-for.html](https://ryanpcmcquen.org/javascript/2015/10/25/map-vs-foreach-vs-for.html)
+
 Recently on Twitter I noticed [Eric Elliott](https://twitter.com/_ericelliott) saying this:
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Favor `map()` over `forEach()` when you can. Avoid side-effects.&#10;<a href="https://twitter.com/hashtag/functional?src=hash">#functional</a> <a href="https://twitter.com/hashtag/JavaScript?src=hash">#JavaScript</a></p>&mdash; Eric Elliott (@_ericelliott) <a href="https://twitter.com/_ericelliott/status/655530013631107072">October 17, 2015</a></blockquote>
