@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ".map() vs .forEach() vs for ()"
-date: 2017-07-19 09:02:31
+date: 2015-10-25 10:08:31
 categories: javascript
 ---
 
