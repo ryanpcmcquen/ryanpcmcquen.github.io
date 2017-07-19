@@ -1,13 +1,13 @@
 ---
 layout: post
-title: ".map() vs .forEach() vs for()"
-date: 2015-10-25 10:08:31
+title: ".map() vs .forEach() vs for ()"
+date: 2017-07-19 09:02:31
 categories: javascript
 ---
 
 Due to the amount of traffic this article still receives, it has been given a much needed refresh. For the sake of comments that happened before July 19, 2017, the original version is still available here:
 
-https://ryanpcmcquen.org/javascript/2015/10/25/DEPRECATED__map-vs-foreach-vs-for.html
+[https://ryanpcmcquen.org/javascript/2015/10/25/DEPRECATED--map-vs-foreach-vs-for.html](https://ryanpcmcquen.org/javascript/2015/10/25/DEPRECATED--map-vs-foreach-vs-for.html)
 
 You may find yourself at a point where you wonder whether to use `.map()`, `.forEach()` or `for ()`.
 
