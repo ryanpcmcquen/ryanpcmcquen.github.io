@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DEPRECATED! -- .map() vs .forEach() vs for() -- DEPRECATED!"
+title: "DEPRECATED! -- .map() vs .forEach() vs for()"
 date: 2015-10-25 10:08:31
 categories: javascript
 ---
