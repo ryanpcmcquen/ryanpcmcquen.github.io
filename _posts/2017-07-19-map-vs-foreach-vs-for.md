@@ -49,7 +49,7 @@ This focuses all of the assignment code into one expression!
 
 ---
 
-Let's take a look at another example. Say we need to produce a new array and add `1` to each value in that array:
+Let's take a look at another example. Say we need to produce an array that adds `1` to each value in that array:
 
 ```js
 var nums = [
@@ -62,8 +62,8 @@ var nums = [
 Procedural style:
 
 ```js
-nums.forEach(function (num) {
-    return num + 1;
+nums.forEach(function (num, index) {
+    return nums[index] = num + 1;
 });
 ```
 
