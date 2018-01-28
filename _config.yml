@@ -1,11 +1,12 @@
-# Site settings
-title: Ryan P.C. McQuen
-##email: ryanpcmcquen AT member DOT fsf DOT org
+# Site settings:
+title: Ryan P. C. McQuen
 description: Hacker.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://ryanpcmcquen.org" # the base hostname & protocol for your site
+# The subpath of your site, e.g. /blog/:
+baseurl: ""
+# The base hostname & protocol for your site:
+url: "https://ryanpcmcquen.org"
 twitter_username: ryanpcmcquen
 github_username: ryanpcmcquen
 
-# Build settings
+# Build settings:
 markdown: kramdown
