@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using clean-css v4.1.9.
+ * Original file: /npm/winamp2-js@0.0.2/css/winamp.css
+ * 
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+canvas{-webkit-user-select:none;-moz-user-select:none;user-select:none}#winamp2-js input[type=range]{-webkit-appearance:none;margin:0;padding:0;background:0 0;border:none}#winamp2-js input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;border:none;border-radius:0;background:0 0}#winamp2-js input[type=range]::-moz-range-thumb{border:none;border-radius:0;background:0 0}#winamp2-js input[type=range]::-moz-range-track{border:none;background:0 0}#winamp2-js input[type=range]:focus{outline:0}#winamp2-js input[type=range]::-moz-focus-outer{border:0}#winamp2-js a:focus{outline:0}@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-webkit-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}#winamp2-js .character{display:inline-block;vertical-align:top;width:5px;height:6px;text-indent:-9999px}#winamp2-js .window{position:absolute;image-rendering:-moz-crisp-edges;image-rendering:-o-crisp-edges;image-rendering:-webkit-optimize-contrast;image-rendering:pixelated;-ms-interpolation-mode:nearest-neighbor}#winamp2-js .window{-webkit-transform:translateZ(0)}#winamp2-js .window.doubled{-moz-transform:translateZ(0) scale(2);-moz-transform-origin:top left;-webkit-transform:translateZ(0) scale(2);-webkit-transform-origin:top left}
+/*# sourceMappingURL=/sm/7b48197b5796e3c8ec43d4e99ac86db5295ca44bfa88f3c563b56f3401ba1e5a.map */

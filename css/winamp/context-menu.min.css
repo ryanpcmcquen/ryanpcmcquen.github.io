@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using clean-css v4.1.9.
+ * Original file: /npm/winamp2-js@0.0.2/css/context-menu.css
+ * 
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+#context-menu{left:0}#context-menu.bottom{top:12px}#context-menu.top{top:0}#context-menu,#context-menu ul{z-index:50;background-color:#fff;position:absolute;list-style:none;padding:0;margin:0;border:1px solid #a7a394;cursor:default;box-shadow:2px 2px 4px rgba(0,0,0,.5)}#context-menu li{position:relative;font-family:Tahoma;font-size:11px;color:#000;white-space:nowrap;margin:2px;padding:1px 18px 3px 18px;display:block}#context-menu li.parent:after{float:right;content:"\25b8";margin-right:-12px}#context-menu li a{text-decoration:none;color:#000;cursor:default}#context-menu li:hover,#context-menu li:hover a{background-color:#224eb7;color:#fff}#context-menu li.hr{padding:2px 0}#context-menu li.hr:hover{background-color:#fff}#context-menu li.hr hr{border:none;height:1px;background-color:#a7a394;margin:0;padding:0}#context-menu ul{display:none;left:100%;margin-left:-3px}#context-menu li:hover ul{display:block}
+/*# sourceMappingURL=/sm/6b250130b615ea354e2d73f8a337a09252b955492620af899ce01e58a5995734.map */

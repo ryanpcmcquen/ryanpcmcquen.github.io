@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using clean-css v4.1.9.
+ * Original file: /npm/winamp2-js@0.0.2/css/page.css
+ * 
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+body{background-color:#224eb7;font-family:arial;font-size:15px}#browser-compatibility{display:none;position:absolute;width:275px;margin-top:-58px;margin-left:-137px;top:40%;left:50%;background:#fff;text-align:center}.about{position:absolute;bottom:0;right:1em;color:#fff;z-index:-1}.about a{color:#fff}#winamp2-js #loading{color:#fff;text-align:center;font-size:40px;height:30px;position:absolute;margin:auto;top:0;left:0;bottom:0;right:0}#winamp2-js #loading .ellipsis-anim span{opacity:0;-webkit-animation:ellipsis-dot 1s infinite;animation:ellipsis-dot 1s infinite}#winamp2-js #loading .ellipsis-anim span:nth-child(1){-webkit-animation-delay:0s;animation-delay:0s}#winamp2-js #loading .ellipsis-anim span:nth-child(2){-webkit-animation-delay:.1s;animation-delay:.1s}#winamp2-js #loading .ellipsis-anim span:nth-child(3){-webkit-animation-delay:.2s;animation-delay:.2s}@-webkit-keyframes ellipsis-dot{0%{opacity:0}50%{opacity:1}100%{opacity:0}}@keyframes ellipsis-dot{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+/*# sourceMappingURL=/sm/a70fdc02e4c8369d2377739add507b20613fc3920ba9409211cc0eb4330db92f.map */
