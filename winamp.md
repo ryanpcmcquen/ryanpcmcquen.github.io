@@ -1,18 +1,8 @@
+---
+layout: page
+title: Winamp
+permalink: /winamp/
+custom_js: winamp
+---
+
 <div class="winamp2-js"></div>
-
-<script>
-const winamp = new winamp2js({
-    initialTrack: {
-        name: "Ryan P.C. McQuen jazz demo",
-        url:
-            "https://ryanpcmcquen.org/assets/Ryan_PC_McQuen_jazz_please--2017.mp3"
-    },
-    initialSkin: {
-        url:
-            "https://d38dnrh1liu4f5.cloudfront.net/projects/winamp2-js/skins/base-2.91.wsz"
-    }
-});
-
-// Render after the skin has loaded.
-winamp.renderWhenReady(document.querySelector(".winamp2-js"));
-</script>
