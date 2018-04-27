@@ -5,7 +5,7 @@ description: Hacker.
 baseurl: ""
 # The base hostname & protocol for your site:
 url: "https://ryanpcmcquen.org"
-twitter_username: ryanpcmcquen
+#twitter_username:
 github_username: ryanpcmcquen
 
 # Build settings:
