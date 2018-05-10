@@ -4,7 +4,13 @@ title: Music
 permalink: /music/
 ---
 
-Here's my jazz demo:
+Links:
+
+<a href="https://www.facebook.com/McQuenMusic/">Facebook</a>
+
+<a href="https://soundcloud.com/mcquenmusic">SoundCloud</a>
+
+Demo:
 
 MP3:
 
