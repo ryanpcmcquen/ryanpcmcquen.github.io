@@ -6,7 +6,7 @@ permalink: /music/
 
 Links:
 
-<a href="https://www.facebook.com/McQuenMusic/">Facebook</a>
+<a href="https://www.facebook.com/McQuenCeol/">Facebook</a>
 
 <a href="https://soundcloud.com/mcquenmusic">SoundCloud</a>
 
