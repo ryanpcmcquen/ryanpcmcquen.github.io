@@ -1,6 +1,6 @@
 const winamp = new winamp2js({
     initialTrack: {
-        name: "Ryan P.C. McQuen jazz demo",
+        name: "Ryan P. C. McQuen jazz demo",
         url:
             "https://ryanpcmcquen.org/assets/Ryan_PC_McQuen_jazz_please--2017.mp3"
     },
