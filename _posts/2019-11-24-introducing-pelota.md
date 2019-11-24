@@ -8,7 +8,7 @@ categories: code
 I am still here. It's been a while since I blogged, but rest assured, I've been coding quite a bit.
 
 ---
-
+<br>
 
 I'm working on a new project I am very excited about. It's written in C! You can see more about
 it in either of the below videos (depending on which service you prefer streaming from):
