@@ -17,6 +17,10 @@ I write code.
 
 * * *
 
+Want to write a cross platform SDL2 project in C?
+
+[SDL2_template](https://github.com/ryanpcmcquen/SDL2_template)
+
 Want to test performance in `node` or browser JS?
 
 [testperf](https://github.com/ryanpcmcquen/testperf)
@@ -36,10 +40,6 @@ Need to normalize the heights or widths of elements?
 Need a lightweight & modular debounce/throttle?
 
 [Odis](https://github.com/ryanpcmcquen/odis)
-
-Want to easily do stuff on scroll events?
-
-[scrollEvents](https://github.com/ryanpcmcquen/scrollEvents)
 
 Need to copy text without flash?
 
