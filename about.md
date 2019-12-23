@@ -12,7 +12,7 @@ custom_js: scrambler
 
 I write code.
 
-<span id="moniker">slackwareNerd-veggie-jScriptDork</span>
+<span id="moniker">wannabeGamedev-veggie-cLover</span>
 
 
 * * *
