@@ -14,32 +14,19 @@ I write code.
 
 <span id="moniker">wannabeGameDev-veggie-c99Lover</span>
 
-
 * * *
+
+Want to know how NOT to write a game engine?
+
+[basque](https://github.com/ryanpcmcquen/basque)
+
+Need one dimensional 2d arrays?
+
+[fake_d](https://github.com/ryanpcmcquen/fake_d)
 
 Want to write a cross platform SDL2 project in C?
 
 [SDL2_template](https://github.com/ryanpcmcquen/SDL2_template)
-
-Want to test performance in `node` or browser JS?
-
-[testperf](https://github.com/ryanpcmcquen/testperf)
-
-Wish JavaScript had a `queryParent` function? Me too:
-
-[queryparent](https://github.com/ryanpcmcquen/queryparent)
-
-How about `querySibling`?
-
-[querysibling](https://github.com/ryanpcmcquen/querysibling)
-
-Need to normalize the heights or widths of elements?
-
-[normalizeStuff.js](https://github.com/ryanpcmcquen/normalizeStuff.js)
-
-Need a lightweight & modular debounce/throttle?
-
-[Odis](https://github.com/ryanpcmcquen/odis)
 
 Need to copy text without flash?
 
@@ -52,19 +39,3 @@ Need nerdy placeholders?
 How about image optimization?
 
 [imgult](https://github.com/ryanpcmcquen/image-ultimator)
-
-* * *
-
-#### OTHER STUFF:
-
-Allegedly useful:
-
-[config-o-matic](https://github.com/ryanpcmcquen/config-o-matic) & [linuxTweaks](https://github.com/ryanpcmcquen/linuxTweaks)
-
-Not useful:
-
-[fiddles](https://jsfiddle.net/user/ryanpcmcquen/)
-
-Probably detrimental:
-
-[neocities](https://ryanpcmcquen.neocities.org/)
