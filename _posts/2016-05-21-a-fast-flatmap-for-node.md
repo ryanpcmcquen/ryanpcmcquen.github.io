@@ -22,19 +22,23 @@ After some testing and research I have published my first [npm module](https://w
       source: `
 (() => {
   'use strict';
-  const flatMap = require('flatmap-fast');
+  
+  const flatMap = require("flatmap-fast");
 
-  const arrNum = [
-    [],
-    [1],
-    [2, 3]
-  ];
+  const testArr = ['Hi', 'World'];
+  const splitWord = (word) => word.split('');
 
-  return (
-    flatMap(arrNum, (i) => {
-      return i + i;
-    })
+  console.log(
+    flatMap(testArr, splitWord)
   );
+
+  // => ['H', 'i', 'W', 'o', 'r', 'l', 'd']
+  
+  console.log(
+    flatMap([1, 2, 3, 4], (x) => [x, x * 2])
+  );
+  
+  // => [1, 2, 2, 4, 3, 6, 4, 8]
 })();
 `,
       nodeVersion: ">=4.x.x"
