@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Porting a C game to WebAssembly"
-date: 2020-11-26 12:24
+date: 2020-11-26 12:31
 categories: code
 ---
 
@@ -50,7 +50,6 @@ void load_and_play_music(Game* game)
         printf("Mix_Init: %s\n", Mix_GetError());
         // We can still continue without audio. :^(
     } else {
-
         if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) == 0) {
             Mix_VolumeMusic(MUSIC_VOLUME);
             game->music = Mix_LoadMUS(MUSIC_INTRO_FILE);
@@ -70,7 +69,6 @@ The **good** way:
 ```c
 void load_and_play_music(Game* game)
 {
-
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) == 0) {
         int flags = MIX_INIT_OGG;
         int initted = Mix_Init(flags);
