@@ -98,7 +98,6 @@ check [Basque](https://github.com/ryanpcmcquen/basque) directly for the full imp
 here, but here's the basic JS and HTML I'm using for 4 arrow keys:
 
 ```html
-
         <div class="controller">
             <button
                 class="controls"
@@ -138,7 +137,6 @@ here, but here's the basic JS and HTML I'm using for 4 arrow keys:
 ```
 
 ```js
-
             // Thanks to @juj for some hints on this issue as to how to get this working:
             // https://github.com/emscripten-core/emscripten/issues/3614#issuecomment-142032269
             var create_and_fire_event = function (event, type) {
