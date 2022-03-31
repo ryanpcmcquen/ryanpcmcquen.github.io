@@ -13,7 +13,8 @@ I am still here. It's been a while since I blogged, but rest assured, I've been 
 I'm working on a new project I am very excited about. It's written in C! You can see more about
 it in either of the below videos (depending on which service you prefer streaming from):
 
-<iframe src="https://player.twitch.tv/?video=506918129&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+<iframe src="https://player.twitch.tv/?video=506918129&parent=www.ryanpcmcquen.org" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bnRI80bf0FY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
