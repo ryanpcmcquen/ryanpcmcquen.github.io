@@ -7,4 +7,4 @@ categories: code
 
 I've started writing fiction on Substack:
 
-https://mcquen.substack.com/p/restaurant-microservices
+[https://mcquen.substack.com/p/restaurant-microservices](https://mcquen.substack.com/p/restaurant-microservices)
