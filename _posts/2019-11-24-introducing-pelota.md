@@ -18,4 +18,4 @@ it in either of the below videos (depending on which service you prefer streamin
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bnRI80bf0FY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-I am streaming some of the development on my Twitch channel.
+I am streaming some of the development on my [Twitch channel](https://twitch.tv/ryanpcmcquen).
