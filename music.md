@@ -22,7 +22,7 @@ Neither Ryan, nor any Austrian historians could be reached to verify any part of
 
 ### Links:
 
-<a href="https://www.facebook.com/McQuenJazz/">Facebook</a>
+<!-- <a href="https://www.facebook.com/McQuenJazz/">Facebook</a> -->
 
 <a href="https://soundcloud.com/mcquenmusic">SoundCloud</a>
 
